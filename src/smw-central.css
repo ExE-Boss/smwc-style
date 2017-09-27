@@ -1,0 +1,146 @@
+/*
+ * Copyright (C) 2017 ExE Boss
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.exe-boss-post-root,
+.exe-boss-post-root * {
+	box-sizing:	border-box;
+}
+
+.exe-boss-post-root {
+	position:	relative;
+	display:	block;
+
+	font:	14px "Carlito", "Calibri", "Liberation Sans", sans-serif;
+	color:	#EEE;
+
+	background: #002F5F;
+	background:	linear-gradient(to bottom, #001F3F 0%, #003F7F 100%);
+
+	min-height:	203px;
+	height:	100%;
+
+	padding-bottom:	64px;
+}
+
+.exe-boss-post-root a {
+	color:	#BFEBFF;
+	text-decoration:	none;
+}
+
+.exe-boss-post-root a:hover {
+	text-decoration:	underline;
+}
+
+.postpadding > .exe-boss-post-root {
+	margin:	-1px	-4px;
+}
+
+.exe-boss-post-root > .exe-boss-post-main {
+	display:	block;
+	padding:	12px	8px 4px;
+}
+
+.exe-boss-post-root > .exe-boss-post-footer {
+	position:	absolute;
+	display:	block;
+
+	left:	0;
+	right:	0;
+	bottom:	0;
+
+	margin-top:	12px;
+	padding:	8px 16px;
+
+	background:	rgba(195,195,195,0.435);
+	background:	linear-gradient(to bottom,rgba(209,209,209,0.42) 0%,rgba(182,182,182,0.45) 100%);
+}
+
+/* Boxes */
+
+.exe-boss-post-root .code,
+.exe-boss-post-root .quote {
+	margin:	8px;
+}
+
+.exe-boss-post-root .boxhead {
+	margin-left:	4px;
+	font-size:	12px !important;
+	color:	#EEE !important;
+}
+
+/* Boxes > Quotes */
+
+.exe-boss-post-root .quote > .boxhead {
+	position:	relative;
+	color:	#BFEBFF !important;
+}
+
+.exe-boss-post-root .quote > .boxhead::before {
+	position:	absolute;
+	color:	#FFF !important;
+
+	content:	"Originally posted by";
+	cursor:	text;
+}
+
+.exe-boss-post-root .quote > .box {
+	padding:	3px	7px;
+	background:	rgba(195,195,195,0.435);
+	background:	linear-gradient(to bottom,rgba(209,209,209,0.21) 0%,rgba(182,182,182,0.225) 100%);
+
+	border:	1px	solid #AAA;
+	border-radius:	4px;
+	margin-top:	4px;
+}
+
+/* Boxes > Code blocks */
+
+.exe-boss-post-root code,
+.exe-boss-post-root .code pre,
+.exe-boss-post-root .code pre.box {
+	font-size:	14px;
+	font-family:	"Input Mono", Consolas, "Lucida Console", monospace !important;
+	font-stretch:	condensed;
+}
+
+.exe-boss-post-root .code pre,
+.exe-boss-post-root .code pre.box {
+	position:	relative;
+	
+	padding:	16px;
+	padding-left:	30px;
+	margin-top:	4px;
+
+	border:	none;
+	border-left:	5px solid #59B;
+	border-radius:	4px;
+
+	line-height:	21px;
+	background:	#EEE;
+	color:	#333;
+}
+
+.exe-boss-post-root .code pre.box::before {
+	position:	absolute;
+
+	left:	16px;
+	top:	16px;
+	bottom:	16px;
+
+	content:	"";
+	border-right:	1px solid #999;
+}
