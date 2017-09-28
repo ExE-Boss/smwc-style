@@ -89,6 +89,7 @@
 	color:	#BFEBFF !important;
 }
 
+.exe-boss-post-root.ie-legacy .quote > .boxhead:before,
 .exe-boss-post-root[data-ie~="legacy"] .quote > .boxhead:before,
 .exe-boss-post-root .quote > .boxhead::before {
 	position:	absolute;
@@ -135,6 +136,7 @@
 	color:	#333;
 }
 
+.exe-boss-post-root.ie-legacy .code > pre.box:before,
 .exe-boss-post-root[data-ie~="legacy"] .code > pre.box:before,
 .exe-boss-post-root .code > pre.box::before {
 	position:	absolute;
@@ -148,6 +150,7 @@
 }
 
 /* IE6-9 */
+.exe-boss-post-root.ie-gradient,
 .exe-boss-post-root[data-ie~="gradient"] {
 	filter:	progid:DXImageTransform.Microsoft.gradient(
 		startColorstr='#001f3f',
@@ -155,6 +158,7 @@
 		GradientType=0);
 }
 
+.exe-boss-post-root.ie-gradient > .exe-boss-post-footer,
 .exe-boss-post-root[data-ie~="gradient"] > .exe-boss-post-footer {
 	filter:	progid:DXImageTransform.Microsoft.gradient(
 		startColorstr='#6bd1d1d1',
@@ -163,6 +167,7 @@
 }
 
 
+.exe-boss-post-root.ie-gradient .quote > .box,
 .exe-boss-post-root[data-ie~="gradient"] .quote > .box {
 	filter:	progid:DXImageTransform.Microsoft.gradient(
 		startColorstr='#36d1d1d1',
