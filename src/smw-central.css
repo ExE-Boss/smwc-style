@@ -89,6 +89,7 @@
 	color:	#BFEBFF !important;
 }
 
+.exe-boss-post-root[data-ie~="legacy"] .quote > .boxhead:before,
 .exe-boss-post-root .quote > .boxhead::before {
 	position:	absolute;
 	color:	#FFF !important;
@@ -99,7 +100,7 @@
 
 .exe-boss-post-root .quote > .box {
 	padding:	3px	7px;
-	background:	rgba(195,195,195,0.435);
+	background:	rgba(195,195,195,0.2175);
 	background:	linear-gradient(to bottom,rgba(209,209,209,0.21) 0%,rgba(182,182,182,0.225) 100%);
 
 	border:	1px	solid #AAA;
@@ -110,17 +111,17 @@
 /* Boxes > Code blocks */
 
 .exe-boss-post-root code,
-.exe-boss-post-root .code pre,
-.exe-boss-post-root .code pre.box {
+.exe-boss-post-root .code > pre,
+.exe-boss-post-root .code > pre.box {
 	font-size:	14px;
 	font-family:	"Input Mono", Consolas, "Lucida Console", monospace !important;
 	font-stretch:	condensed;
 }
 
-.exe-boss-post-root .code pre,
-.exe-boss-post-root .code pre.box {
+.exe-boss-post-root .code > pre,
+.exe-boss-post-root .code > pre.box {
 	position:	relative;
-	
+
 	padding:	16px;
 	padding-left:	30px;
 	margin-top:	4px;
@@ -134,7 +135,8 @@
 	color:	#333;
 }
 
-.exe-boss-post-root .code pre.box::before {
+.exe-boss-post-root[data-ie~="legacy"] .code > pre.box:before,
+.exe-boss-post-root .code > pre.box::before {
 	position:	absolute;
 
 	left:	16px;
@@ -143,4 +145,27 @@
 
 	content:	"";
 	border-right:	1px solid #999;
+}
+
+/* IE6-9 */
+.exe-boss-post-root[data-ie~="gradient"] {
+	filter:	progid:DXImageTransform.Microsoft.gradient(
+		startColorstr='#001f3f',
+		endColorstr='#003f7f',
+		GradientType=0);
+}
+
+.exe-boss-post-root[data-ie~="gradient"] > .exe-boss-post-footer {
+	filter:	progid:DXImageTransform.Microsoft.gradient(
+		startColorstr='#6bd1d1d1',
+		endColorstr='#73b6b6b6',
+		GradientType=0);
+}
+
+
+.exe-boss-post-root[data-ie~="gradient"] .quote > .box {
+	filter:	progid:DXImageTransform.Microsoft.gradient(
+		startColorstr='#36d1d1d1',
+		endColorstr='#39b6b6b6',
+		GradientType=0);
 }
