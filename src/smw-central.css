@@ -27,11 +27,11 @@
 	font:	14px "Carlito", "Calibri", "Liberation Sans", sans-serif;
 	color:	#EEE;
 
-	background: #002F5F;
+	background:	#002F5F;
 	background:	linear-gradient(to bottom, #001F3F 0%, #003F7F 100%);
 
-	min-height:	208px;
 	height:	100%;
+	min-height:	208px;
 
 	padding-bottom:	64px;
 }
@@ -91,7 +91,7 @@
 
 .exe-boss-post-root.ie-legacy .quote > .boxhead:before,
 .exe-boss-post-root[data-ie~="legacy"] .quote > .boxhead:before,
-.exe-boss-post-root .quote > .boxhead::before {
+.exe-boss-post-root:not(.ie-legacy) .quote > .boxhead::before {
 	position:	absolute;
 	color:	#FFF !important;
 
@@ -122,15 +122,18 @@
 .exe-boss-post-root .code > pre,
 .exe-boss-post-root .code > pre.box {
 	position:	relative;
+	tab-size:	4;
 
 	padding:	16px;
-	padding-left:	30px;
+	padding-left:	29px;
+	padding-left:	calc(3.5ch + 1px);
 	margin-top:	4px;
 
 	border:	none;
 	border-left:	5px solid #59B;
 	border-radius:	4px;
 
+	min-height:	21px;
 	line-height:	21px;
 	background:	#EEE;
 	color:	#333;
@@ -138,18 +141,36 @@
 
 .exe-boss-post-root.ie-legacy .code > pre.box:before,
 .exe-boss-post-root[data-ie~="legacy"] .code > pre.box:before,
-.exe-boss-post-root .code > pre.box::before {
+.exe-boss-post-root:not(.ie-legacy) .code > pre.box::before {
+	box-sizing:	border-box;
 	position:	absolute;
+	display:	block;
 
-	left:	16px;
 	top:	16px;
+	left:	0px;
 	bottom:	16px;
+
+	color:	#888;
+
+	padding-right:	12px;
+	padding-right:	1.5ch;
+	padding-left:	4px;
+	padding-left:	.5ch;
+	text-align:	right;
 
 	content:	"";
 	border-right:	1px solid #999;
 }
 
+.exe-boss-post-root.ie-legacy .code > pre.box:after,
+.exe-boss-post-root[data-ie~="legacy"] .code > pre.box:after,
+.exe-boss-post-root:not(.ie-legacy) .code > pre.box::after {
+	display: inline;
+	content:	" ";
+}
+
 /* IE6-9 */
+
 .exe-boss-post-root.ie-gradient,
 .exe-boss-post-root[data-ie~="gradient"] {
 	filter:	progid:DXImageTransform.Microsoft.gradient(
