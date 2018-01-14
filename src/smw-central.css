@@ -98,6 +98,10 @@
 
 	content:	"Originally posted by";
 	cursor:	text;
+
+	top:	0;
+	left:	0;
+	bottom:	0;
 }
 
 .exe-boss-post-root .quote > .box {
