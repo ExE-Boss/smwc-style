@@ -1,0 +1,23 @@
+{
+	"name": "@exe-boss/x.smwc-style",
+	"version": "0.1.0",
+	"description": "SMW Central Post Layout",
+	"scripts": {
+		"build": "node ./node_modules/postcss-cli/index.js -o dist/exe-boss.css src/smw-central.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/ExE-Boss/smwc-style.git"
+	},
+	"author": "ExE Boss",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/ExE-Boss/smwc-style/issues"
+	},
+	"homepage": "https://github.com/ExE-Boss/smwc-style#readme",
+	"devDependencies": {
+		"autoprefixer": "^8.3.0",
+		"postcss": "^6.0.21",
+		"postcss-cli": "^5.0.0"
+	}
+}

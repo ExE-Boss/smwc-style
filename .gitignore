@@ -1,18 +1,25 @@
-## Ignore All
+# Ignore Everything
 /*
 
 # Except:
-!LICENSE
-
 ## Sources
+!/bin
 !/src
 
 ## Git
 !/.gitattributes
 !/.gitignore
-!/README.md
+!/.gitmodules
+!README*
+!LICENSE*
 
-## unwanted os-generated files
+## npm
+!/.*rc
+!/package*
+!/postcss*
+!/yarn*
+
+# Unwanted crap
 .DS_Store
 .DS_Store?
 ._*
