@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 ExE Boss
+ * Copyright (C) 2018 ExE Boss
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,9 +22,9 @@
 
 .exe-boss-post-root {
 	position:	relative;
-	display:	block;
+	display:	flex;
 
-	font:	14px "Carlito", "Calibri", "Liberation Sans", sans-serif;
+	font:	16px "Carlito", "Calibri", "Liberation Sans", sans-serif;
 	color:	#EEE;
 
 	background:	#002F5F;
@@ -32,8 +32,7 @@
 
 	height:	100%;
 	min-height:	208px;
-
-	padding-bottom:	64px;
+	flex-direction:	column;
 }
 
 .exe-boss-post-root a {
@@ -52,34 +51,56 @@
 
 .exe-boss-post-root > .exe-boss-post-main {
 	display:	block;
-	padding:	12px	8px 4px;
+	margin:	1em;
+	flex-grow:	1;
 }
 
 .exe-boss-post-root > .exe-boss-post-footer {
-	position:	absolute;
 	display:	block;
 
-	left:	0;
-	right:	0;
-	bottom:	0;
-
-	margin-top:	12px;
-	padding:	8px 16px;
+	margin-top:	6px;
+	padding:	.5em 1em;
 
 	background:	rgba(195,195,195,0.435);
 	background:	linear-gradient(to bottom,rgba(209,209,209,0.42) 0%,rgba(182,182,182,0.45) 100%);
 }
 
+.exe-boss-post-root .spoiler {
+	display:	inline;
+	border:	none;
+
+	padding:	0 4px;
+}
+
+.exe-boss-post-root .spoiler > .spoilerInner {
+	visibility:	visible	!important;
+	transition:	.25s opacity;
+
+	opacity:	0;
+	padding:	0;
+}
+
+.exe-boss-post-root .spoiler:hover > .spoilerInner {
+	opacity:	1;
+}
+
 /* Boxes */
 
+.exe-boss-post-root p,
 .exe-boss-post-root .code,
 .exe-boss-post-root .quote {
-	margin:	8px;
+	margin:	0 0 1em;
+}
+
+.exe-boss-post-root .code + br,
+.exe-boss-post-root .quote + br {
+	display: none;
 }
 
 .exe-boss-post-root .boxhead {
 	margin-left:	4px;
-	font-size:	12px !important;
+	font-size:	14px !important;
+	font-size:	87.5% !important;
 	color:	#EEE !important;
 }
 
@@ -105,7 +126,7 @@
 }
 
 .exe-boss-post-root .quote > .box {
-	padding:	3px	7px;
+	padding:	1em;
 	background:	rgba(195,195,195,0.2175);
 	background:	linear-gradient(to bottom,rgba(209,209,209,0.21) 0%,rgba(182,182,182,0.225) 100%);
 
@@ -120,6 +141,7 @@
 .exe-boss-post-root .code > pre,
 .exe-boss-post-root .code > pre.box {
 	font-size:	14px;
+	font-size:	87.5%;
 	font-family:	"Input Mono", Consolas, "Lucida Console", monospace !important;
 	font-stretch:	condensed;
 }
