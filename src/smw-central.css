@@ -111,9 +111,7 @@
 	color:	#BFEBFF !important;
 }
 
-.exe-boss-post-root.ie-legacy .quote > .boxhead:before,
-.exe-boss-post-root[data-ie~="legacy"] .quote > .boxhead:before,
-.exe-boss-post-root:not(.ie-legacy) .quote > .boxhead::before {
+.exe-boss-post-root .quote > .boxhead::before {
 	position:	absolute;
 	color:	#FFF !important;
 
@@ -166,9 +164,7 @@
 	color:	#333;
 }
 
-.exe-boss-post-root.ie-legacy .code > pre.box:before,
-.exe-boss-post-root[data-ie~="legacy"] .code > pre.box:before,
-.exe-boss-post-root:not(.ie-legacy) .code > pre.box::before {
+.exe-boss-post-root .code > pre.box::before {
 	box-sizing:	border-box;
 	position:	absolute;
 	display:	block;
@@ -190,44 +186,14 @@
 	border-right:	1px solid #999;
 }
 
-.exe-boss-post-root.ie-legacy .code > pre.box:after,
-.exe-boss-post-root[data-ie~="legacy"] .code > pre.box:after,
-.exe-boss-post-root:not(.ie-legacy) .code > pre.box::after {
+.exe-boss-post-root .code > pre.box::after {
 	display: inline;
 	content:	" ";
 }
 
-/* IE6-9 */
-
-.exe-boss-post-root.ie-gradient,
-.exe-boss-post-root[data-ie~="gradient"] {
-	filter:	progid:DXImageTransform.Microsoft.gradient(
-		startColorstr='#001f3f',
-		endColorstr='#003f7f',
-		GradientType=0);
-}
-
-.exe-boss-post-root.ie-gradient > .exe-boss-post-footer,
-.exe-boss-post-root[data-ie~="gradient"] > .exe-boss-post-footer {
-	filter:	progid:DXImageTransform.Microsoft.gradient(
-		startColorstr='#6bd1d1d1',
-		endColorstr='#73b6b6b6',
-		GradientType=0);
-}
-
-.exe-boss-post-root.ie-gradient .quote > .box,
-.exe-boss-post-root[data-ie~="gradient"] .quote > .box {
-	filter:	progid:DXImageTransform.Microsoft.gradient(
-		startColorstr='#36d1d1d1',
-		endColorstr='#39b6b6b6',
-		GradientType=0);
-}
-
 /* Line numbers */
 
-.exe-boss-post-root.ie-legacy .code > pre.box:before,
-.exe-boss-post-root[data-ie~="legacy"] .code > pre.box:before,
-.exe-boss-post-root:not(.ie-legacy) .code > pre.box::before {
+.exe-boss-post-root .code > pre.box::before {
 	content:
 "1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 10\A \
 11\A 12\A 13\A 14\A 15\A 16\A 17\A 18\A 19\A 20\A \
