@@ -15,10 +15,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-.exe-boss-post-root,
-.exe-boss-post-root * {
-	box-sizing:	border-box;
-}
+@import "exe-boss-base.css";
+@import "exe-boss-util.css";
 
 .exe-boss-post-root {
 	position:	relative;
@@ -86,12 +84,6 @@
 
 /* Boxes */
 
-.exe-boss-post-root p,
-.exe-boss-post-root .code,
-.exe-boss-post-root .quote {
-	margin:	0 0 1em;
-}
-
 .exe-boss-post-root .code + br,
 .exe-boss-post-root .quote + br {
 	display: none;
@@ -136,6 +128,7 @@
 /* Boxes > Code blocks */
 
 .exe-boss-post-root code,
+.exe-boss-post-root pre,
 .exe-boss-post-root .code > pre,
 .exe-boss-post-root .code > pre.box {
 	font-size:	14px;
@@ -144,26 +137,31 @@
 	font-stretch:	condensed;
 }
 
-.exe-boss-post-root .code > pre,
+.exe-boss-post-root pre.box,
 .exe-boss-post-root .code > pre.box {
 	position:	relative;
-	tab-size:	4;
 
 	padding:	16px;
-	padding-left:	59px;
-	padding-left:	calc(7.25ch + 1px);
 	margin-top:	4px;
 
 	border:	none;
 	border-left:	5px solid #59B;
 	border-radius:	4px;
 
-	min-height:	21px;
 	line-height:	21px;
 	background:	#EEE;
 	color:	#333;
 }
 
+/* Line numbers */
+
+.exe-boss-post-main pre.box.line-numbers,
+.exe-boss-post-main .code > pre.box {
+	padding-left:	65.65px;
+	padding-left:	calc(7.25ch + 1px);
+}
+
+.exe-boss-post-main pre.box.line-numbers::before,
 .exe-boss-post-root .code > pre.box::before {
 	box-sizing:	border-box;
 	position:	absolute;
@@ -186,13 +184,13 @@
 	border-right:	1px solid #999;
 }
 
+.exe-boss-post-root pre.box.line-numbers::after,
 .exe-boss-post-root .code > pre.box::after {
-	display: inline;
+	display:	inline;
 	content:	" ";
 }
 
-/* Line numbers */
-
+.exe-boss-post-root pre.box.line-numbers::before,
 .exe-boss-post-root .code > pre.box::before {
 	content:
 "1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 10\A \

@@ -1,0 +1,52 @@
+/*
+ * Copyright (C) 2018 ExE Boss
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/** This file is inspired by Bootstrap’s utility classes. */
+/* Padding */
+.exe-boss-post-root .p-0	{ padding:	0 !important;	}
+.exe-boss-post-root .py-0,	.exe-boss-post-root .pt-0	{ padding-top:	0	!important;	}
+.exe-boss-post-root .px-0,	.exe-boss-post-root .pl-0	{ padding-left:	0	!important;	}
+.exe-boss-post-root .py-0,	.exe-boss-post-root .pb-0	{ padding-bottom:	0	!important;	}
+.exe-boss-post-root .px-0,	.exe-boss-post-root .pr-0	{ padding-right:	0	!important;	}
+
+/* Margin */
+.exe-boss-post-root .m-0	{ margin:	0 !important;	}
+.exe-boss-post-root .my-0,	.exe-boss-post-root .mt-0	{ margin-top:	0	!important;	}
+.exe-boss-post-root .mx-0,	.exe-boss-post-root .ml-0	{ margin-left:	0	!important;	}
+.exe-boss-post-root .mx-0,	.exe-boss-post-root .mr-0	{ margin-right:	0	!important;	}
+.exe-boss-post-root .my-0,	.exe-boss-post-root .mb-0	{ margin-bottom:	0	!important;	}
+
+.exe-boss-post-root .m-auto	{ margin:	auto !important;	}
+.exe-boss-post-root .my-auto,	.exe-boss-post-root .mt-auto	{ margin-top:	auto	!important;	}
+.exe-boss-post-root .mx-auto,	.exe-boss-post-root .ml-auto	{ margin-left:	auto	!important;	}
+.exe-boss-post-root .mx-auto,	.exe-boss-post-root .mr-auto	{ margin-right:	auto	!important;	}
+.exe-boss-post-root .my-auto,	.exe-boss-post-root .mb-auto	{ margin-bottom:	auto	!important;	}
+
+/* Display */
+.exe-boss-post-root .d-none	{ display:	none	!important;	}
+.exe-boss-post-root .d-inline	{ display:	inline	!important;	}
+.exe-boss-post-root .d-inline-block	{ display:	inline-block	!important;	}
+.exe-boss-post-root .d-block	{ display:	block	!important;	}
+.exe-boss-post-root .d-table	{ display:	table	!important;	}
+.exe-boss-post-root .d-table-row	{ display:	table-row	!important;	}
+.exe-boss-post-root .d-table-cell	{ display:	table-cell	!important;	}
+.exe-boss-post-root .d-flex	{ display:	flex	!important;	}
+.exe-boss-post-root .d-inline-flex	{ display:	inline-flex	!important;	}
+
+/* ::before and ::after */
+.exe-boss-post-root .before-none::before	{ content:	none	!important; }
+.exe-boss-post-root .after-none::after	{ content:	none	!important; }
