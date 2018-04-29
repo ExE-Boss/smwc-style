@@ -115,6 +115,10 @@
 	bottom:	0;
 }
 
+.exe-boss-post-root .quote > .boxhead:any-link::before {
+	cursor:	inherit;
+}
+
 .exe-boss-post-root .quote > .box {
 	padding:	1em;
 	background:	rgba(195,195,195,0.2175);
