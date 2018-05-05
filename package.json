@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"description": "SMW Central Post Layout",
 	"scripts": {
-		"build": "node ./node_modules/postcss-cli/index.js -o dist/exe-boss.css src/post-layout/exe-boss.css"
+		"post-layout": "gulp post-layout"
 	},
 	"repository": {
 		"type": "git",
@@ -17,8 +17,17 @@
 	"homepage": "https://github.com/ExE-Boss/smwc-style#readme",
 	"devDependencies": {
 		"autoprefixer": "^8.3.0",
+		"eslint": "^4.19.1",
+		"gulp": "^3.9.1",
+		"gulp-postcss": "^7.0.1",
+		"gulp-sourcemaps": "^2.6.4",
 		"postcss": "^6.0.21",
 		"postcss-cli": "^5.0.0",
-		"postcss-import": "^11.1.0"
-	}
+		"postcss-import": "^11.1.0",
+		"yargs": "^11.0.0"
+	},
+	"browserslist": [
+		"> 0.5%",
+		"Firefox ESR"
+	]
 }

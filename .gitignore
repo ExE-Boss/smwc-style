@@ -14,9 +14,9 @@
 !LICENSE*
 
 ## npm
-!/.*rc
+!/.*rc.json
+!/gulpfile*
 !/package*
-!/postcss*
 !/yarn*
 
 # Unwanted crap
