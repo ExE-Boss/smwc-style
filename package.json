@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"description": "SMW Central Post Layout",
 	"scripts": {
-		"build": "node ./node_modules/postcss-cli/index.js -o dist/exe-boss.css src/exe-boss.css"
+		"build": "node ./node_modules/postcss-cli/index.js -o dist/exe-boss.css src/post-layout/exe-boss.css"
 	},
 	"repository": {
 		"type": "git",

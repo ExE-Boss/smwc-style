@@ -1,11 +1,6 @@
 [![License](https://img.shields.io/github/license/ExE-Boss/smwc-style.svg)](https://github.com/ExE-Boss/smwc-style/blob/master/LICENSE)
 
-SMW Central Stylesheets
+SMW Central Post Layout
 =======================
 
-The source code for all my SMW Central style projects.
-
-Projects
---------
-
-- [SMW Central Post Layout](src/post-layout/)
+The source code for my SMW Central post layout
