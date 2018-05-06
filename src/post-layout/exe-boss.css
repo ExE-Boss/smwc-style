@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  * Copyright (C) 2018 ExE Boss
  *
@@ -17,10 +18,11 @@
 
 @import "exe-boss-base.css";
 @import "exe-boss-util.css";
+@import "exe-boss-version.css";
 
 .exe-boss-post-root {
-	position:	relative;
 	display:	flex;
+	flex-direction:	column;
 
 	font:	16px "Carlito", "Calibri", "Liberation Sans", sans-serif;
 	color:	#EEE;
@@ -30,7 +32,6 @@
 
 	height:	100%;
 	min-height:	208px;
-	flex-direction:	column;
 }
 
 .exe-boss-post-root a {
@@ -45,6 +46,10 @@
 
 .postpadding > .exe-boss-post-root {
 	margin:	-1px	-4px;
+}
+
+.exe-boss-post-root > .exe-boss-post-header {
+	margin-block-end:	6px;
 }
 
 .exe-boss-post-root > .exe-boss-post-main {
@@ -139,6 +144,12 @@
 	font-size:	87.5%;
 	font-family:	"Input Mono", Consolas, "Lucida Console", monospace !important;
 	font-stretch:	condensed;
+}
+
+.exe-boss-post-root pre,
+.exe-boss-post-root .code > pre,
+.exe-boss-post-root .code > pre.box {
+	white-space:	pre-wrap;
 }
 
 .exe-boss-post-root pre.box,

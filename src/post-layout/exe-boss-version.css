@@ -1,0 +1,55 @@
+/*
+ * Copyright (C) 2018 ExE Boss
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.exe-boss-post-root > .exe-boss-post-header > .outdated.v1 {
+	display:	none	!important;
+}
+
+.exe-boss-post-root > .exe-boss-post-header > .outdated {
+	display:	flex;
+	padding:	12px 18px;
+	text-align:	center;
+
+	align-items:	center;
+	align-content:	center;
+	justify-content:	space-between;
+
+	background:	rgba(191,191,191,0.3125);
+	background-clip:	padding-box;
+
+	border:	16px solid red;
+	border-image:	repeating-linear-gradient(-45deg,red 0,red 8px,yellow 8px,yellow 16px,red 16px) 16 round;
+}
+
+.exe-boss-post-root > .exe-boss-post-header > .outdated::before,
+.exe-boss-post-root > .exe-boss-post-header > .outdated::after {
+	display:	block;
+	content:	"\26A0\FE0F";
+	font-size:	200%;
+	margin-top:	-.25em;
+}
+
+@media (min-width: 992px) {
+	.exe-boss-post-root > .exe-boss-post-header > .outdated {
+		padding:	16px 24px;
+		font-size:	150%;
+	}
+}
+
+.exe-boss-post-root > .exe-boss-post-header > .outdated .main {
+	max-width:	960px;
+}

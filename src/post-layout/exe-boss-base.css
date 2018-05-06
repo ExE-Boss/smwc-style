@@ -26,8 +26,21 @@
 }
 
 .exe-boss-post-root p,
+.exe-boss-post-root dl,
+.exe-boss-post-root ol,
+.exe-boss-post-root ul,
 .exe-boss-post-root pre,
 .exe-boss-post-root .code,
 .exe-boss-post-root .quote {
 	margin:	0 0 1em;
+}
+
+.exe-boss-post-root dt {
+	font-weight:	bold;
+	margin-top:	1.5em;
+}
+
+.exe-boss-post-root dd {
+	margin-bottom:	.5em;
+	margin-inline-start:	1em;
 }
