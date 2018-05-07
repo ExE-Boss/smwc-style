@@ -10,7 +10,7 @@ const argsBuilder = require("yargs")
 	.exitProcess(false)
 	.option("dest", {
 		alias: "destination",
-		default: "./dist/"
+		default: "./dist"
 	});
 
 gulp.task("post-layout", () => {
@@ -21,11 +21,11 @@ gulp.task("post-layout", () => {
 		.pipe(postcss(file => ({
 			plugins: [
 				postcssImport({root: file.base}),
-				autoprefixer
+				autoprefixer({cascade: false})
 			]
 		})))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(args.dest || "./dist/"))
+		.pipe(gulp.dest(args.dest || "./dist"))
 		.pipe(browserSync.stream());
 });
 
@@ -33,7 +33,7 @@ gulp.task("post-layout-html", () => {
 	const args = argsBuilder.argv;
 
 	return gulp.src("./src/post-layout/smw-central.html")
-		.pipe(gulp.dest(args.dest || "./dist/"));
+		.pipe(gulp.dest(args.dest || "./dist"));
 });
 
 gulp.task("serve", ["post-layout", "post-layout-html"], () => {

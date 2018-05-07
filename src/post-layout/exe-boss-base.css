@@ -44,3 +44,9 @@
 	margin-bottom:	.5em;
 	margin-inline-start:	1em;
 }
+
+@supports not (margin-inline-start: 1em) {
+	.exe-boss-post-root dd {
+		margin-left:	1em;
+	}
+}
