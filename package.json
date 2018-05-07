@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"description": "SMW Central Post Layout",
 	"scripts": {
-		"post-layout": "gulp post-layout"
+		"post-layout": "./node_modules/.bin/gulp post-layout"
 	},
 	"repository": {
 		"type": "git",
@@ -20,6 +20,7 @@
 		"browser-sync": "^2.24.4",
 		"eslint": "^4.19.1",
 		"gulp": "^3.9.1",
+		"gulp-cli": "^2.0.1",
 		"gulp-postcss": "^7.0.1",
 		"gulp-sourcemaps": "^2.6.4",
 		"postcss": "^6.0.21",

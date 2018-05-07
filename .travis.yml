@@ -11,13 +11,10 @@ node_js:
 # The install script
 install:
     - yarn
-    - npm i -g gulp-cli
 
 # The build script
 script:
-    - git clone -b gh-pages -v https://${GH_TOKEN}@github.com/ExE-Boss/smwc-style.git ../gh-pages
-    - rm -rf ../gh-pages/*
-    - gulp post-layout --dest ../gh-pages
+    - . ./bin/post-layout ../gh-pages
 
 # The commit script
 after_success:

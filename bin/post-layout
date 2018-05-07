@@ -1,0 +1,13 @@
+#!/bin/bash
+
+dir=./dist
+
+if [ $# -ge 1 ]; then
+	dir=$1
+	if [ ! -d "$dir" ] || [ ! "$(ls -A "$dir")" ]; then
+		git clone -b gh-pages -v https://${GH_TOKEN}@github.com/ExE-Boss/smwc-style.git "$dir"
+	fi
+	rm -rf "$dir/*"
+fi
+
+yarn run post-layout --dest "$dir"
