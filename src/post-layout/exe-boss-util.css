@@ -15,37 +15,73 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/** This file is inspired by Bootstrap’s utility classes. */
+/* This file is inspired by Bootstrap’s utility classes. */
+
+/* TODO: Build these using a pre-processor. */
 /* Padding */
-.exe-boss-post-root .p-0	{ padding:	0 !important;	}
+.exe-boss-post-root .p-0	{ padding:	0	!important;	}
 .exe-boss-post-root .py-0,	.exe-boss-post-root .pt-0	{ padding-top:	0	!important;	}
 .exe-boss-post-root .px-0,	.exe-boss-post-root .pl-0	{ padding-left:	0	!important;	}
-.exe-boss-post-root .py-0,	.exe-boss-post-root .pb-0	{ padding-bottom:	0	!important;	}
 .exe-boss-post-root .px-0,	.exe-boss-post-root .pr-0	{ padding-right:	0	!important;	}
+.exe-boss-post-root .py-0,	.exe-boss-post-root .pb-0	{ padding-bottom:	0	!important;	}
+
+.exe-boss-post-root .p-1	{ padding:	4px	!important;	}
+.exe-boss-post-root .py-1,	.exe-boss-post-root .pt-1	{ padding-top:	4px	!important;	}
+.exe-boss-post-root .px-1,	.exe-boss-post-root .pl-1	{ padding-left:	4px	!important;	}
+.exe-boss-post-root .px-1,	.exe-boss-post-root .pr-1	{ padding-right:	4px	!important;	}
+.exe-boss-post-root .py-1,	.exe-boss-post-root .pb-1	{ padding-bottom:	4px	!important;	}
+
+.exe-boss-post-root .p-2	{ padding:	8px	!important;	}
+.exe-boss-post-root .py-2,	.exe-boss-post-root .pt-2	{ padding-top:	8px	!important;	}
+.exe-boss-post-root .px-2,	.exe-boss-post-root .pl-2	{ padding-left:	8px	!important;	}
+.exe-boss-post-root .px-2,	.exe-boss-post-root .pr-2	{ padding-right:	8px	!important;	}
+.exe-boss-post-root .py-2,	.exe-boss-post-root .pb-2	{ padding-bottom:	8px	!important;	}
 
 /* Margin */
-.exe-boss-post-root .m-0	{ margin:	0 !important;	}
+.exe-boss-post-root .m-0	{ margin:	0	!important;	}
 .exe-boss-post-root .my-0,	.exe-boss-post-root .mt-0	{ margin-top:	0	!important;	}
 .exe-boss-post-root .mx-0,	.exe-boss-post-root .ml-0	{ margin-left:	0	!important;	}
 .exe-boss-post-root .mx-0,	.exe-boss-post-root .mr-0	{ margin-right:	0	!important;	}
 .exe-boss-post-root .my-0,	.exe-boss-post-root .mb-0	{ margin-bottom:	0	!important;	}
 
-.exe-boss-post-root .m-auto	{ margin:	auto !important;	}
+.exe-boss-post-root .m-1	{ margin:	4px	!important;	}
+.exe-boss-post-root .my-1,	.exe-boss-post-root .mt-1	{ margin-top:	4px	!important;	}
+.exe-boss-post-root .mx-1,	.exe-boss-post-root .ml-1	{ margin-left:	4px	!important;	}
+.exe-boss-post-root .mx-1,	.exe-boss-post-root .mr-1	{ margin-right:	4px	!important;	}
+.exe-boss-post-root .my-1,	.exe-boss-post-root .mb-1	{ margin-bottom:	4px	!important;	}
+
+.exe-boss-post-root .m-1	{ margin:	8px	!important;	}
+.exe-boss-post-root .my-1,	.exe-boss-post-root .mt-1	{ margin-top:	8px	!important;	}
+.exe-boss-post-root .mx-1,	.exe-boss-post-root .ml-1	{ margin-left:	8px	!important;	}
+.exe-boss-post-root .mx-1,	.exe-boss-post-root .mr-1	{ margin-right:	8px	!important;	}
+.exe-boss-post-root .my-1,	.exe-boss-post-root .mb-1	{ margin-bottom:	8px	!important;	}
+
+.exe-boss-post-root .m-auto 	{ margin:	auto	!important;	}
 .exe-boss-post-root .my-auto,	.exe-boss-post-root .mt-auto	{ margin-top:	auto	!important;	}
 .exe-boss-post-root .mx-auto,	.exe-boss-post-root .ml-auto	{ margin-left:	auto	!important;	}
 .exe-boss-post-root .mx-auto,	.exe-boss-post-root .mr-auto	{ margin-right:	auto	!important;	}
 .exe-boss-post-root .my-auto,	.exe-boss-post-root .mb-auto	{ margin-bottom:	auto	!important;	}
 
-/* Display */
-.exe-boss-post-root .d-none	{ display:	none	!important;	}
-.exe-boss-post-root .d-inline	{ display:	inline	!important;	}
-.exe-boss-post-root .d-inline-block	{ display:	inline-block	!important;	}
+/* Display Box */
+.exe-boss-post-root .d-none 	{ display:	none	!important;	}
+.exe-boss-post-root .d-contents	{ display:	contents	!important;	}
+
+/* Display Outside */
 .exe-boss-post-root .d-block	{ display:	block	!important;	}
+.exe-boss-post-root .d-inline	{ display:	inline	!important;	}
+.exe-boss-post-root .d-run-in	{ display:	run-in	!important;	}
+
+/* Display Inside */
+.exe-boss-post-root .d-flex 	{ display:	flex	!important;	}
 .exe-boss-post-root .d-table	{ display:	table	!important;	}
 .exe-boss-post-root .d-table-row	{ display:	table-row	!important;	}
 .exe-boss-post-root .d-table-cell	{ display:	table-cell	!important;	}
-.exe-boss-post-root .d-flex	{ display:	flex	!important;	}
-.exe-boss-post-root .d-inline-flex	{ display:	inline-flex	!important;	}
+
+/* Display Inline */
+.exe-boss-post-root .d-inline-block	{ display:	inline-block	!important;	}
+.exe-boss-post-root .d-inline-flex	{ display:	inline-flex 	!important;	}
+.exe-boss-post-root .d-inline-grid	{ display:	inline-grid 	!important;	}
+.exe-boss-post-root .d-inline-table	{ display:	inline-table	!important;	}
 
 /* ::before and ::after */
 .exe-boss-post-root .before-none::before	{ content:	none	!important; }

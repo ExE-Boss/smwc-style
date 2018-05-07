@@ -15,7 +15,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-.exe-boss-post-root > .exe-boss-post-header > .outdated.v1 {
+.exe-boss-post-root > .exe-boss-post-header > .outdated.v1,
+.exe-boss-post-root > .exe-boss-post-header > .outdated.v2 {
 	display:	none	!important;
 }
 
@@ -28,11 +29,11 @@
 	align-content:	center;
 	justify-content:	space-between;
 
-	background:	rgba(191,191,191,0.3125);
+	background:	rgba(191, 191, 191, 0.3125);
 	background-clip:	padding-box;
 
 	border:	16px solid red;
-	border-image:	repeating-linear-gradient(-45deg,red 0,red 8px,yellow 8px,yellow 16px,red 16px) 16 round;
+	border-image:	repeating-linear-gradient(-45deg, red 0, red 8px, yellow 8px, yellow 16px, red 16px) 16 round;
 }
 
 .exe-boss-post-root > .exe-boss-post-header > .outdated::before,
@@ -40,7 +41,6 @@
 	display:	block;
 	content:	"\26A0\FE0F";
 	font-size:	200%;
-	margin-top:	-.25em;
 }
 
 @media (min-width: 992px) {

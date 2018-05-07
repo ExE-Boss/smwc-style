@@ -18,6 +18,7 @@
 !/gulpfile*
 !/package*
 !/yarn*
+!/.*ignore
 
 ## Travis CI
 !/.travis.yml

@@ -18,9 +18,14 @@
 .exe-boss-post-root {
 	all:	initial;
 	tab-size:	4;
+
+	font:	16px "Carlito", "Calibri", "Liberation Sans", sans-serif;
+	line-height:	1.5;
 }
 
 .exe-boss-post-root,
+.exe-boss-post-root *::before,
+.exe-boss-post-root *::after,
 .exe-boss-post-root * {
 	box-sizing:	border-box;
 }
@@ -49,4 +54,35 @@
 	.exe-boss-post-root dd {
 		margin-left:	1em;
 	}
+}
+
+.exe-boss-post-root h1,
+.exe-boss-post-root h2,
+.exe-boss-post-root h3,
+.exe-boss-post-root h4,
+.exe-boss-post-root h5,
+.exe-boss-post-root h6 {
+	margin-top: 0;
+	margin-bottom: 8px;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+.exe-boss-post-root h1	{ font-size:	2.5em;	}
+.exe-boss-post-root h2	{ font-size:	2em;	}
+.exe-boss-post-root h3	{ font-size:	1.75em;	}
+.exe-boss-post-root h4	{ font-size:	1.5em;	}
+.exe-boss-post-root h5	{ font-size:	1.25em;	}
+.exe-boss-post-root h6	{ font-size:	1em;	}
+
+.exe-boss-post-root hr {
+	margin-top: 16px;
+	margin-bottom: 16px;
+
+	border: 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+	box-sizing: content-box;
+	overflow: visible;
+	height: 0;
 }

@@ -6,12 +6,16 @@ const browserSync	= require("browser-sync");
 const autoprefixer	= require("autoprefixer");
 const postcssImport	= require("postcss-import");
 
+const stylelint	= require("gulp-stylelint");
+
 const argsBuilder = require("yargs")
 	.exitProcess(false)
 	.option("dest", {
 		alias: "destination",
 		default: "./dist"
 	});
+
+/* Building */
 
 gulp.task("post-layout", () => {
 	const args = argsBuilder.argv;
@@ -48,4 +52,24 @@ gulp.task("serve", ["post-layout", "post-layout-html"], () => {
 	gulp.watch("./src/post-layout/*.css",	["post-layout"]);
 	gulp.watch("./src/post-layout/*.html",	["post-layout-html"])
 		.on("change", browserSync.reload);
+});
+
+/* Linting */
+
+gulp.task("lint", ["post-layout-lint"]);
+
+gulp.task("post-layout-lint", () => {
+	return gulp.src("./src/post-layout/**/*.css")
+		.pipe(stylelint({
+			reporters: [{
+				formatter: "string",
+				console: true
+			}]
+		}))
+		.pipe(postcss(file => ({
+			plugins: [
+				postcssImport({root: file.base}),
+				autoprefixer({cascade: false})
+			]
+		})));
 });
