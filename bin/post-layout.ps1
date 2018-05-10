@@ -2,14 +2,16 @@
 
 Param(
 	[Parameter(Position=1)]
-	[String] $Destination = "./dist"	# The build destination
+	[String] $Destination = "dist"	# The build destination
 );
 
-if (-not [System.IO.Path]::GetFullPath($Destination).StartsWith([System.IO.Path]::GetFullPath("."))) {
-	if (-not (Test-Path $Destination)) {
-		git clone -b gh-pages -v "https://${$env:GH_TOKEN}@github.com/ExE-Boss/smwc-style.git" "$Destination"
+$basedir=(Split-Path $MyInvocation.MyCommand.Definition -Parent)+'\..'
+
+if (-not [System.IO.Path]::GetFullPath("$basedir/$Destination").StartsWith([System.IO.Path]::GetFullPath($basedir))) {
+	if (-not (Test-Path "$basedir/$Destination")) {
+		git clone -b gh-pages -v "https://${$env:GH_TOKEN}@github.com/ExE-Boss/smwc-style.git" "$basedir/$Destination"
 	}
-	Remove-Item "$Destination/*" -Force -Recurse -Exclude ".*"
+	Remove-Item "$basedir/$Destination/*" -Force -Recurse -Exclude ".*"
 }
 
-yarn run post-layout --dest "$Destination"
+yarn run post-layout --dest "$basedir/$Destination"

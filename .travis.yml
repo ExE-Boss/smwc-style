@@ -15,7 +15,8 @@ install:
 # The build script
 script:
     - yarn run lint
-    - . ./bin/post-layout ../gh-pages
+    - chmod u+x ./bin/post-layout
+    - ./bin/post-layout ../gh-pages
 
 # The commit script
 after_success:

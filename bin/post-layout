@@ -1,13 +1,14 @@
 #!/bin/bash
 
-dir=./dist
+basedir="$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")/.."
+dir=dist
 
 if [ $# -ge 1 ]; then
 	dir=$1
-	if [ ! -d "$dir" ] || [ ! "$(ls -A "$dir")" ]; then
-		git clone -b gh-pages -v https://${GH_TOKEN}@github.com/ExE-Boss/smwc-style.git "$dir"
+	if [ ! -d "$basedir/$dir" ] || [ ! "$(ls -A "$basedir/$dir")" ]; then
+		git clone -b gh-pages -v https://${GH_TOKEN}@github.com/ExE-Boss/smwc-style.git "$basedir/$dir"
 	fi
-	rm -rf "$dir/*"
+	rm -rf "$basedir/$dir/*"
 fi
 
-yarn run post-layout --dest "$dir"
+yarn run post-layout --dest "$basedir/$dir"

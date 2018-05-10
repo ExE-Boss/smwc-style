@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"description": "SMW Central Post Layout",
 	"scripts": {
+		"build": "./bin/build",
 		"lint": "./node_modules/.bin/gulp lint",
 		"post-layout": "./node_modules/.bin/gulp post-layout"
 	},
