@@ -52,7 +52,7 @@
 
 .exe-boss-post-root > .exe-boss-post-main {
 	display:	block;
-	margin:	1em;
+	margin: 	1em;
 	flex-grow:	1;
 }
 
@@ -68,7 +68,7 @@
 
 .exe-boss-post-root .spoiler {
 	display:	inline;
-	border:	none;
+	border: 	none;
 
 	padding:	0 4px;
 }
@@ -89,7 +89,7 @@
 
 .exe-boss-post-root .code + br,
 .exe-boss-post-root .quote + br {
-	display: none;
+	display:	none;
 }
 
 .exe-boss-post-root .boxhead {
@@ -97,6 +97,7 @@
 	font-size:	14px !important;
 	font-size:	87.5% !important;
 	color:	#EEE !important;
+	display:	block;
 }
 
 /* Boxes > Quotes */
