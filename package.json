@@ -2,6 +2,7 @@
 	"name": "@exe-boss/x.smwc-style",
 	"version": "0.1.0",
 	"description": "SMW Central Post Layout",
+	"author": "ExE Boss",
 	"scripts": {
 		"build": "./bin/build",
 		"lint": "./node_modules/.bin/gulp lint",
@@ -11,7 +12,7 @@
 		"type": "git",
 		"url": "git+ssh://git@github.com/ExE-Boss/smwc-style.git"
 	},
-	"author": "ExE Boss",
+	"private": true,
 	"license": "GPL-3.0",
 	"bugs": {
 		"url": "https://github.com/ExE-Boss/smwc-style/issues"
