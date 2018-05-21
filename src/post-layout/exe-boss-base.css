@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-.exe-boss-post-root {
+& {
 	all:	initial;
 	tab-size:	4;
 
@@ -23,59 +23,59 @@
 	line-height:	1.5;
 }
 
-.exe-boss-post-root,
-.exe-boss-post-root *::before,
-.exe-boss-post-root *::after,
-.exe-boss-post-root * {
+&,
+*::before,
+*::after,
+* {
 	box-sizing:	border-box;
 }
 
-.exe-boss-post-root p,
-.exe-boss-post-root dl,
-.exe-boss-post-root ol,
-.exe-boss-post-root ul,
-.exe-boss-post-root pre,
-.exe-boss-post-root .code,
-.exe-boss-post-root .quote {
+p,
+dl,
+ol,
+ul,
+pre,
+.code,
+.quote {
 	margin:	0 0 1em;
 }
 
-.exe-boss-post-root dt {
+dt {
 	font-weight:	bold;
 	margin-top:	1.5em;
 }
 
-.exe-boss-post-root dd {
+dd {
 	margin-bottom:	.5em;
 	margin-inline-start:	1em;
 }
 
 @supports not (margin-inline-start: 1em) {
-	.exe-boss-post-root dd {
+	dd {
 		margin-left:	1em;
 	}
 }
 
-.exe-boss-post-root h1,
-.exe-boss-post-root h2,
-.exe-boss-post-root h3,
-.exe-boss-post-root h4,
-.exe-boss-post-root h5,
-.exe-boss-post-root h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	margin-top: 0;
 	margin-bottom: 8px;
 	font-weight: 500;
 	line-height: 1.2;
 }
 
-.exe-boss-post-root h1	{ font-size:	2.5em;	}
-.exe-boss-post-root h2	{ font-size:	2em;	}
-.exe-boss-post-root h3	{ font-size:	1.75em;	}
-.exe-boss-post-root h4	{ font-size:	1.5em;	}
-.exe-boss-post-root h5	{ font-size:	1.25em;	}
-.exe-boss-post-root h6	{ font-size:	1em;	}
+h1	{ font-size:	2.5em;	}
+h2	{ font-size:	2em;	}
+h3	{ font-size:	1.75em;	}
+h4	{ font-size:	1.5em;	}
+h5	{ font-size:	1.25em;	}
+h6	{ font-size:	1em;	}
 
-.exe-boss-post-root hr {
+hr {
 	margin-top: 16px;
 	margin-bottom: 16px;
 

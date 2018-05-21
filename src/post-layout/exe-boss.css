@@ -20,7 +20,7 @@
 @import "exe-boss-util.css";
 @import "exe-boss-version.css";
 
-.exe-boss-post-root {
+& {
 	display:	flex;
 	flex-direction:	column;
 
@@ -32,31 +32,31 @@
 	min-height:	208px;
 }
 
-.exe-boss-post-root a {
+a {
 	color:	#BFEBFF;
 	font-weight:	normal;
 	text-decoration:	none;
 }
 
-.exe-boss-post-root a:hover {
+a:hover {
 	text-decoration:	underline;
 }
 
-.postpadding > .exe-boss-post-root {
+.postpadding > & {
 	margin:	-1px	-4px;
 }
 
-.exe-boss-post-root > .exe-boss-post-header {
+& > .exe-boss-post-header {
 	margin-block-end:	6px;
 }
 
-.exe-boss-post-root > .exe-boss-post-main {
+& > .exe-boss-post-main {
 	display:	block;
 	margin: 	1em;
 	flex-grow:	1;
 }
 
-.exe-boss-post-root > .exe-boss-post-footer {
+& > .exe-boss-post-footer {
 	display:	block;
 
 	margin-top:	6px;
@@ -66,14 +66,14 @@
 	background:	linear-gradient(to bottom,rgba(209,209,209,0.42) 0%,rgba(182,182,182,0.45) 100%);
 }
 
-.exe-boss-post-root .spoiler {
+.spoiler {
 	display:	inline;
 	border: 	none;
 
 	padding:	0 4px;
 }
 
-.exe-boss-post-root .spoiler > .spoilerInner {
+.spoiler > .spoilerInner {
 	visibility:	visible	!important;
 	transition:	.25s opacity;
 
@@ -81,18 +81,18 @@
 	padding:	0;
 }
 
-.exe-boss-post-root .spoiler:hover > .spoilerInner {
+.spoiler:hover > .spoilerInner {
 	opacity:	1;
 }
 
 /* Boxes */
 
-.exe-boss-post-root .code + br,
-.exe-boss-post-root .quote + br {
+.code + br,
+.quote + br {
 	display:	none;
 }
 
-.exe-boss-post-root .boxhead {
+.boxhead {
 	margin-left:	4px;
 	font-size:	14px !important;
 	font-size:	87.5% !important;
@@ -102,12 +102,12 @@
 
 /* Boxes > Quotes */
 
-.exe-boss-post-root .quote > .boxhead {
+.quote > .boxhead {
 	position:	relative;
 	color:	#BFEBFF !important;
 }
 
-.exe-boss-post-root .quote > .boxhead::before {
+.quote > .boxhead::before {
 	position:	absolute;
 	color:	#FFF !important;
 
@@ -119,11 +119,11 @@
 	bottom:	0;
 }
 
-.exe-boss-post-root .quote > .boxhead:any-link::before {
+.quote > .boxhead:any-link::before {
 	cursor:	inherit;
 }
 
-.exe-boss-post-root .quote > .box {
+.quote > .box {
 	padding:	1em;
 	background:	rgba(195,195,195,0.2175);
 	background:	linear-gradient(to bottom,rgba(209,209,209,0.21) 0%,rgba(182,182,182,0.225) 100%);
@@ -135,24 +135,24 @@
 
 /* Boxes > Code blocks */
 
-.exe-boss-post-root code,
-.exe-boss-post-root pre,
-.exe-boss-post-root .code > pre,
-.exe-boss-post-root .code > pre.box {
+code,
+pre,
+.code > pre,
+.code > pre.box {
 	font-size:	14px;
 	font-size:	87.5%;
 	font-family:	"Input Mono", "Consolas", "Lucida Console", monospace !important;
 	font-stretch:	condensed;
 }
 
-.exe-boss-post-root pre,
-.exe-boss-post-root .code > pre,
-.exe-boss-post-root .code > pre.box {
+pre,
+.code > pre,
+.code > pre.box {
 	white-space:	pre-wrap;
 }
 
-.exe-boss-post-root pre.box,
-.exe-boss-post-root .code > pre.box {
+pre.box,
+.code > pre.box {
 	position:	relative;
 
 	padding:	16px;
@@ -169,14 +169,14 @@
 
 /* Line numbers */
 
-.exe-boss-post-main pre.box.line-numbers,
-.exe-boss-post-main .code > pre.box {
+pre.box.line-numbers,
+.code > pre.box {
 	padding-left:	65.65px;
 	padding-left:	calc(7.25ch + 1px);
 }
 
-.exe-boss-post-main pre.box.line-numbers::before,
-.exe-boss-post-root .code > pre.box::before {
+pre.box.line-numbers::before,
+.code > pre.box::before {
 	box-sizing:	border-box;
 	position:	absolute;
 	display:	block;
@@ -198,14 +198,14 @@
 	border-right:	1px solid #999;
 }
 
-.exe-boss-post-root pre.box.line-numbers::after,
-.exe-boss-post-root .code > pre.box::after {
+pre.box.line-numbers::after,
+.code > pre.box::after {
 	display:	inline;
 	content:	" ";
 }
 
-.exe-boss-post-root pre.box.line-numbers::before,
-.exe-boss-post-root .code > pre.box::before {
+pre.box.line-numbers::before,
+.code > pre.box::before {
 	content:
 		"1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 10\A \
 11\A 12\A 13\A 14\A 15\A 16\A 17\A 18\A 19\A 20\A \

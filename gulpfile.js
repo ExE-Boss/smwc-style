@@ -5,6 +5,7 @@ const browserSync	= require("browser-sync");
 
 const autoprefixer	= require("autoprefixer");
 const postcssImport	= require("postcss-import");
+const postcssScopify	= require("postcss-scopify");
 
 const stylelint	= require("gulp-stylelint");
 
@@ -25,6 +26,7 @@ gulp.task("post-layout", () => {
 		.pipe(postcss(file => ({
 			plugins: [
 				postcssImport({root: file.base}),
+				postcssScopify(".exe-boss-post-root"),
 				autoprefixer({cascade: false})
 			]
 		})))
@@ -60,16 +62,15 @@ gulp.task("lint", ["post-layout-lint"]);
 
 gulp.task("post-layout-lint", () => {
 	return gulp.src("./src/post-layout/**/*.css")
+		.pipe(postcss(() => ({
+			plugins: [
+				postcssScopify(".exe-boss-post-root")
+			]
+		})))
 		.pipe(stylelint({
 			reporters: [{
 				formatter: "string",
 				console: true
 			}]
-		}))
-		.pipe(postcss(file => ({
-			plugins: [
-				postcssImport({root: file.base}),
-				autoprefixer({cascade: false})
-			]
-		})));
+		}));
 });
