@@ -11,3 +11,4 @@ Projects
 --------
 
 - [SMW Central Post Layout](src/post-layout/)
+- [SMW Central Modern Layout](src/smwc-modern/)

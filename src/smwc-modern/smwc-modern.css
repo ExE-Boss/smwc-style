@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/*!
+ * Copyright (C) 2018 ExE Boss
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+body {
+	margin: .5rem;
+}
+
+.pipebox,
+.ropebox,
+.treebox {
+	--padding-x: .5rem;
+	--padding-y: .25rem;
+
+	background-image: url("images/text-background.png");
+	background-clip: padding-box;
+	background-repeat: repeat;
+	padding: var(--padding-y) var(--padding-x);
+}
+
+.pipebox {
+	border: 16px solid transparent;
+	border-image: url("images/pipebox.png") 16 round;
+}
+
+.ropebox {
+	border: 7px solid transparent;
+	border-image: url("images/ropebox.png") 7 round;
+}
+
+.ropebox-container > .ropebox:first-child {
+	border-image-source: url("images/ropebox-top.png");
+}
+
+.ropebox-container > .ropebox:not(:first-child) {
+	margin-block-start: -7px;
+}
+
+.ropebox-container > .ropebox:last-child {
+	border-image-source: url("images/ropebox-bottom.png");
+}
+
+.treebox {
+	border: 16px solid transparent;
+	border-image: url("images/treebox.png") 16 round;
+}
+
+#mainmenu {
+	width: 162px;
+	--padding-x: .3rem;
+}
+
+#mainmenu.pipebox {
+	border-image-source: url("images/pipebox-menu.png");
+}
+
+#mainmenu::before {
+	content: url("images/pipebox-menu-text.png");
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#mainmenu.pipebox::before {
+	margin: var(--padding-y) calc(-1 * var(--padding-x));
+	margin-top: calc(-16px - var(--padding-y));
+	height: 16px;
+	width: 100%;
+	width: calc(100% + var(--padding-x) * 2);
+	background: url("images/pipebox-menu-top.png") center repeat-x;
+}
+
+.menu a {
+	color: #999 !important;
+	font-weight: bold;
+}
+
+.menu a:hover {
+	color: #FFF !important;
+	text-decoration: unset;
+}
+
+.menu .ex {
+	background-image: url("images/question-block.gif");
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	padding-bottom: 2px;
+}
+
+/* Override the Bootstrap .border class */
+td.border {
+	border: 1px solid #405060 !important;
+}

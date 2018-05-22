@@ -58,7 +58,7 @@ gulp.task("serve", ["post-layout", "post-layout-html"], () => {
 
 /* Linting */
 
-gulp.task("lint", ["post-layout-lint"]);
+gulp.task("lint", ["post-layout-lint", "smwc-modern-lint"]);
 
 gulp.task("post-layout-lint", () => {
 	return gulp.src("./src/post-layout/**/*.css")
@@ -67,6 +67,16 @@ gulp.task("post-layout-lint", () => {
 				postcssScopify(".exe-boss-post-root")
 			]
 		})))
+		.pipe(stylelint({
+			reporters: [{
+				formatter: "string",
+				console: true
+			}]
+		}));
+});
+
+gulp.task("smwc-modern-lint", () => {
+	return gulp.src("./src/smwc-modern/**/*.css")
 		.pipe(stylelint({
 			reporters: [{
 				formatter: "string",
