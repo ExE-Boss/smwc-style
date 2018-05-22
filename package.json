@@ -18,6 +18,9 @@
 		"url": "https://github.com/ExE-Boss/smwc-style/issues"
 	},
 	"homepage": "https://github.com/ExE-Boss/smwc-style#readme",
+	"dependencies": {
+		"bootstrap": "^4.1.1"
+	},
 	"devDependencies": {
 		"autoprefixer": "^8.5.0",
 		"browser-sync": "^2.24.4",

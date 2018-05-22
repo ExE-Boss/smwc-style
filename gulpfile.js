@@ -25,7 +25,7 @@ gulp.task("post-layout", () => {
 		.pipe(sourcemaps.init())
 		.pipe(postcss(file => ({
 			plugins: [
-				postcssImport({root: file.base}),
+				postcssImport({path: ["./node_modules/bootstrap/dist/css/"]}),
 				postcssScopify(".exe-boss-post-root"),
 				autoprefixer({cascade: false})
 			]

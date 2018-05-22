@@ -5,6 +5,7 @@
 ## Sources
 !/src
 *.html
+*.js
 
 # Unwanted crap
 .DS_Store

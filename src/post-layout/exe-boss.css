@@ -33,7 +33,7 @@
 }
 
 a {
-	color:	#BFEBFF;
+	color:	#BFEBFF !important;
 	font-weight:	normal;
 	text-decoration:	none;
 }
@@ -71,6 +71,8 @@ a:hover {
 	border: 	none;
 
 	padding:	0 4px;
+	padding:	0 .25em;
+	padding:	0 .5ch;
 }
 
 .spoiler > .spoilerInner {
