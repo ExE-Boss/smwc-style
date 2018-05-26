@@ -1,13 +1,17 @@
 const gulp	= require("gulp");
-const postcss	= require("gulp-postcss");
-const sourcemaps	= require("gulp-sourcemaps");
 const browserSync	= require("browser-sync");
+const mergeStream	= require("merge-stream");
+
+const postcss	= require("gulp-postcss");
+const cleanCSS	= require("gulp-clean-css");
+const stylelint	= require("gulp-stylelint");
+const gulpRename	= require("gulp-rename");
+const sourcemaps	= require("gulp-sourcemaps");
 
 const autoprefixer	= require("autoprefixer");
 const postcssImport	= require("postcss-import");
 const postcssScopify	= require("postcss-scopify");
 
-const stylelint	= require("gulp-stylelint");
 
 const argsBuilder = require("yargs")
 	.exitProcess(false)
@@ -20,8 +24,7 @@ const argsBuilder = require("yargs")
 
 gulp.task("post-layout", () => {
 	const args = argsBuilder.argv;
-
-	return gulp.src("./src/post-layout/exe-boss.css")
+	const streamFactory = () => gulp.src("./src/post-layout/exe-boss.css")
 		.pipe(sourcemaps.init())
 		.pipe(postcss(file => ({
 			plugins: [
@@ -29,10 +32,22 @@ gulp.task("post-layout", () => {
 				postcssScopify(".exe-boss-post-root"),
 				autoprefixer({cascade: false})
 			]
-		})))
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(args.dest || "./dist"))
-		.pipe(browserSync.stream());
+		})));
+
+	return mergeStream(
+		streamFactory()
+			.pipe(sourcemaps.write("."))
+			.pipe(gulp.dest(args.dest || "./dist"))
+			.pipe(browserSync.stream()),
+		streamFactory()
+			.pipe(cleanCSS())
+			.pipe(sourcemaps.write("."))
+			.pipe(gulpRename(path => path.basename = /\.css/.test(path.basename)
+				? path.basename.replace(/\.css/, ".min.css")
+				: `${path.basename}.min`))
+			.pipe(gulp.dest(args.dest || "./dist"))
+			.pipe(browserSync.stream())
+	);
 });
 
 gulp.task("post-layout-html", () => {
