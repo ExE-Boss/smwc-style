@@ -26,7 +26,7 @@ gulp.task("post-layout", () => {
 	const args = argsBuilder.argv;
 	const streamFactory = () => gulp.src("./src/post-layout/exe-boss.css")
 		.pipe(sourcemaps.init())
-		.pipe(postcss(file => ({
+		.pipe(postcss(() => ({
 			plugins: [
 				postcssImport({path: ["./node_modules/bootstrap/dist/css/"]}),
 				postcssScopify(".exe-boss-post-root"),
