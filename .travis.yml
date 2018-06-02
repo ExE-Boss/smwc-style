@@ -6,17 +6,29 @@ sudo: false
 language: node_js
 
 node_js:
-    - "lts/*"
+    - "stable"
+
+# The pre-install script
+before_install:
+    - yarn global add greenkeeper-lockfile@1
 
 # The install script
 install:
-    - yarn
+    - yarn install
+
+# The pre-build script
+before_script:
+    - greenkeeper-lockfile-update
+    - yarn run lint
 
 # The build script
 script:
-    - yarn run lint
     - chmod u+x ./bin/post-layout
     - ./bin/post-layout ../gh-pages
+
+# The post-build script
+after_script:
+    - greenkeeper-lockfile-upload
 
 # The commit script
 after_success:
