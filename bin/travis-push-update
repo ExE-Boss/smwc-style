@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then
+	cd ../gh-pages
+	git add -A
+	git config --global user.email "contact@travis-ci.org"
+	git config --global user.name "Travis CI"
+	git commit -am "CI Update" || true
+	git push || true
+fi

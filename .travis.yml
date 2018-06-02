@@ -20,10 +20,11 @@ install:
 before_script:
     - greenkeeper-lockfile-update
     - yarn run lint
+    - chmod u+x ./bin/post-layout
+    - chmod u+x ./bin/travis-push-update
 
 # The build script
 script:
-    - chmod u+x ./bin/post-layout
     - ./bin/post-layout ../gh-pages
 
 # The post-build script
@@ -32,12 +33,7 @@ after_script:
 
 # The commit script
 after_success:
-    - cd ../gh-pages
-    - git add -A
-    - git config --global user.email "contact@travis-ci.org"
-    - git config --global user.name "Travis CI"
-    - git commit -am "CI Update" || true
-    - '[ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ] && git push || true'
+    - ./bin/travis-push-update
 
 # Disable email notifications
 notifications:
