@@ -46,10 +46,6 @@ a:hover {
 	margin:	-1px	-4px;
 }
 
-& > .exe-boss-post-header {
-	margin-block-end:	6px;
-}
-
 & > .exe-boss-post-main {
 	display:	block;
 	margin: 	1em;
@@ -57,9 +53,9 @@ a:hover {
 }
 
 & > .exe-boss-post-footer {
-	display:	block;
+	display:	flex;
+	flex-direction:	column;
 
-	margin-top:	6px;
 	padding:	.5em 1em;
 
 	background:	rgba(195,195,195,0.435);
@@ -96,6 +92,7 @@ a:hover {
 
 .boxhead {
 	margin-left:	4px;
+	margin-bottom:	4px;
 	font-size:	14px !important;
 	font-size:	87.5% !important;
 	color:	#EEE !important;
@@ -125,6 +122,7 @@ a:hover {
 	cursor:	inherit;
 }
 
+blockquote,
 .quote > .box {
 	padding:	1em;
 	background:	rgba(195,195,195,0.2175);
@@ -132,7 +130,6 @@ a:hover {
 
 	border:	1px	solid #AAA;
 	border-radius:	4px;
-	margin-top:	4px;
 }
 
 /* Boxes > Code blocks */
@@ -156,9 +153,7 @@ pre,
 pre.box,
 .code > pre.box {
 	position:	relative;
-
 	padding:	16px;
-	margin-top:	4px;
 
 	border:	none;
 	border-left:	5px solid #59B;

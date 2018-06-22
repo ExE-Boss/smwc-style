@@ -30,14 +30,45 @@ dl,
 ol,
 ul,
 pre,
+table,
+blockquote,
 .code,
 .quote {
-	margin:	0 0 1em;
+	margin:	0 0 1em !important;
+}
+
+p	+ .code 	> .boxhead,
+p	+ .quote	> .boxhead,
+dl	+ .code 	> .boxhead,
+dl	+ .quote	> .boxhead,
+ol	+ .code 	> .boxhead,
+ol	+ .quote	> .boxhead,
+ul	+ .code 	> .boxhead,
+ul	+ .quote	> .boxhead,
+pre	+ .code 	> .boxhead,
+pre	+ .quote	> .boxhead,
+table	+ .code	> .boxhead,
+table	+ .quote	> .boxhead,
+blockquote	+ .code	> .boxhead,
+blockquote	+ .quote	> .boxhead,
+.code	+ .code 	> .boxhead,
+.code	+ .quote	> .boxhead,
+.quote	+ .code 	> .boxhead,
+.quote	+ .quote	> .boxhead {
+	margin-top:	-.5em	!important;
+}
+
+:last-child {
+	margin-bottom:	0	!important;
 }
 
 dt {
 	font-weight:	bold;
 	margin-top:	1.5em;
+}
+
+dt:first-child {
+	margin-top:	0;
 }
 
 dd {
