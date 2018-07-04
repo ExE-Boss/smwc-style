@@ -3,6 +3,8 @@
 basedir="$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")/.."
 dir=dist
 
+set -ev
+
 if [ $# -ge 1 ]; then
 	dir=$1
 	if [ ! -d "$basedir/$dir" ] || [ ! "$(ls -A "$basedir/$dir")" ]; then
@@ -11,4 +13,4 @@ if [ $# -ge 1 ]; then
 	rm -rf "$basedir/$dir/*"
 fi
 
-yarn run post-layout --dest "$basedir/$dir"
+pnpx gulp post-layout --dest "$basedir/$dir"

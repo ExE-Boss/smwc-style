@@ -14,4 +14,4 @@ if (-not [System.IO.Path]::GetFullPath("$basedir/$Destination").StartsWith([Syst
 	Remove-Item "$basedir/$Destination/*" -Force -Recurse -Exclude ".*"
 }
 
-yarn run post-layout --dest "$basedir/$Destination"
+pnpx gulp post-layout --dest "$basedir/$Destination"
