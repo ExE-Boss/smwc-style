@@ -20,6 +20,7 @@
 !/gulpfile*
 !/package*
 !/yarn*
+!/shrinkwrap*
 !/.*ignore
 
 ## Travis CI

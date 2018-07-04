@@ -58,10 +58,10 @@ gulp.task("post-layout", () => {
 			.pipe(browserSync.stream()),
 		streamFactory()
 			.pipe(cleanCSS())
-			.pipe(sourcemaps.write("."))
 			.pipe(gulpRename(path => path.basename = /\.css/.test(path.basename)
 				? path.basename.replace(/\.css/, ".min.css")
 				: `${path.basename}.min`))
+			.pipe(sourcemaps.write("."))
 			.pipe(gulp.dest(args.dest || "./dist"))
 			.pipe(browserSync.stream())
 	);
