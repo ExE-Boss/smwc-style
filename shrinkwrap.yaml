@@ -2,6 +2,13 @@ dependencies:
   bootstrap: 4.1.1
 devDependencies:
   '@exe-boss/eslint-config': 0.1.0
+  '@types/autoprefixer': 6.7.3
+  '@types/browser-sync': 0.0.41
+  '@types/gulp': 4.0.5
+  '@types/gulp-sourcemaps': 0.0.32
+  '@types/lodash.range': 3.2.3
+  '@types/merge-stream': 1.1.1
+  '@types/node': 10.5.1
   autoprefixer: 8.6.4
   browser-sync: 2.24.5
   eslint: 5.0.1
@@ -12,10 +19,12 @@ devDependencies:
   gulp-rename: 1.3.0
   gulp-sourcemaps: 2.6.4
   gulp-stylelint: 7.0.0
+  lodash.range: 3.2.0
   merge-stream: 1.0.1
   postcss: 6.0.23
   postcss-import: 11.1.0
   postcss-scopify: github.com/ExE-Boss/postcss-scopify/491d919befb4ecf1d9c384f6c71666688bd6c4ba
+  postcss-simple-vars: 4.1.0
   stylelint: 9.3.0
   stylelint-config-recommended: 2.1.0
   yargs: 12.0.1
@@ -62,6 +71,143 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-LAQ1d4OPfSJ/BMbI2DuizmYrrkD9JMaTdi2hQTlI53lQ4kRQPyZQRS4CYQ7O66bnBBnP/oYdRxbk++X0xuFU6A==
+  /@types/autoprefixer/6.7.3:
+    dependencies:
+      postcss: 5.2.18
+    dev: true
+    resolution:
+      integrity: sha512-1iqqxR9rcUsTrngdea+dpGP3/iuokNnsGYmgXsclJ6iPJ79gqCcYuJAR1AyQRKUVpikxBZBjJKFzStJAlSWMvw==
+  /@types/browser-sync/0.0.41:
+    dependencies:
+      '@types/chokidar': 1.7.5
+      '@types/micromatch': 2.3.30
+      '@types/node': 10.5.1
+      '@types/serve-static': 1.13.2
+    dev: true
+    resolution:
+      integrity: sha512-nyWj23WopsPk8ZO68iFaqDvo9cKbzxLrMyD0McQHIBSYaHYlr8TutO/+MqMMmYdQRUCoVv0f9E/mMOB/kSBrcQ==
+  /@types/chokidar/1.7.5:
+    dependencies:
+      '@types/events': 1.2.0
+      '@types/node': 10.5.1
+    dev: true
+    resolution:
+      integrity: sha512-PDkSRY7KltW3M60hSBlerxI8SFPXsO3AL/aRVsO4Kh9IHRW74Ih75gUuTd/aE4LSSFqypb10UIX3QzOJwBQMGQ==
+  /@types/events/1.2.0:
+    dev: true
+    resolution:
+      integrity: sha512-KEIlhXnIutzKwRbQkGWb/I4HFqBuUykAdHgDED6xqwXJfONCjF5VoE0cXEiurh3XauygxzeDzgtXUqvLkxFzzA==
+  /@types/express-serve-static-core/4.16.0:
+    dependencies:
+      '@types/events': 1.2.0
+      '@types/node': 10.5.1
+      '@types/range-parser': 1.2.2
+    dev: true
+    resolution:
+      integrity: sha512-lTeoCu5NxJU4OD9moCgm0ESZzweAx0YqsAcab6OB0EB3+As1OaHtKnaGJvcngQxYsi9UNv0abn4/DRavrRxt4w==
+  /@types/glob-stream/6.1.0:
+    dependencies:
+      '@types/glob': 5.0.35
+      '@types/node': 10.5.1
+    dev: true
+    resolution:
+      integrity: sha512-RHv6ZQjcTncXo3thYZrsbAVwoy4vSKosSWhuhuQxLOTv74OJuFQxXkmUuZCr3q9uNBEVCvIzmZL/FeRNbHZGUg==
+  /@types/glob/5.0.35:
+    dependencies:
+      '@types/events': 1.2.0
+      '@types/minimatch': 3.0.3
+      '@types/node': 10.5.1
+    dev: true
+    resolution:
+      integrity: sha512-wc+VveszMLyMWFvXLkloixT4n0harUIVZjnpzztaZ0nKLuul7Z32iMt2fUFGAaZ4y1XWjFRMtCI5ewvyh4aIeg==
+  /@types/gulp-sourcemaps/0.0.32:
+    dependencies:
+      '@types/node': 10.5.1
+    dev: true
+    resolution:
+      integrity: sha512-+7BAmptW2bxyJnJcCEuie7vLoop3FwWgCdBMzyv7MYXED/HeNMeQuX7uPCkp4vfU1TTu4CYFH0IckNPvo0VePA==
+  /@types/gulp/4.0.5:
+    dependencies:
+      '@types/chokidar': 1.7.5
+      '@types/undertaker': 1.2.0
+      '@types/vinyl-fs': 2.4.8
+    dev: true
+    resolution:
+      integrity: sha512-nx1QjPTiRpvLfYsZ7MBu7bT6Cm7tAXyLbY0xbdx2IEMxCK2v2urIhJMQZHW0iV1TskM71Xl6p2uRRuWDbk+/7g==
+  /@types/lodash.range/3.2.3:
+    dependencies:
+      '@types/lodash': 4.14.110
+    dev: true
+    resolution:
+      integrity: sha512-F7mmXVJSaelpv+g3FyleYKx3VLint7j5axkVdjUMWD28vfGh1rEjXksllXcPsjq9NOI9e+H2kg93yzxMxD6svg==
+  /@types/lodash/4.14.110:
+    dev: true
+    resolution:
+      integrity: sha512-iXYLa6olt4tnsCA+ZXeP6eEW3tk1SulWeYyP/yooWfAtXjozqXgtX4+XUtMuOCfYjKGz3F34++qUc3Q+TJuIIw==
+  /@types/merge-stream/1.1.1:
+    dependencies:
+      '@types/node': 10.5.1
+    dev: true
+    resolution:
+      integrity: sha512-3MMu/pT4gZR0V8DBqpSM4mcv1IPpHV7PNsGrA+306R5TXEOPem60OFn37wD+L20t6oE32OebIBLestUoNAEsuA==
+  /@types/micromatch/2.3.30:
+    dependencies:
+      '@types/parse-glob': 3.0.29
+    dev: true
+    resolution:
+      integrity: sha512-6rW4NsUHaDudxJSuRlm1PdNu61CDXkgix7LBOBg7b3yWQ43XANYSPwkvX1cGiZvBVZW8c5rsCEfrfzbPkch8ag==
+  /@types/mime/2.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-A2TAGbTFdBw9azHbpVd+/FkdW2T6msN1uct1O9bH3vTerEHKZhTXJUQXy+hNq1B0RagfU8U+KBdqiZpxjhOUQA==
+  /@types/minimatch/3.0.3:
+    dev: true
+    resolution:
+      integrity: sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
+  /@types/node/10.5.1:
+    dev: true
+    resolution:
+      integrity: sha512-AFLl1IALIuyt6oK4AYZsgWVJ/5rnyzQWud7IebaZWWV3YmgtPZkQmYio9R5Ze/2pdd7XfqF5bP+hWS11mAKoOQ==
+  /@types/parse-glob/3.0.29:
+    dev: true
+    resolution:
+      integrity: sha1-akDsfr0kGO5p7jl+SOQhaSaKEL8=
+  /@types/range-parser/1.2.2:
+    dev: true
+    resolution:
+      integrity: sha512-HtKGu+qG1NPvYe1z7ezLsyIaXYyi8SoAVqWDZgDQ8dLrsZvSzUNCwZyfX33uhWxL/SU0ZDQZ3nwZ0nimt507Kw==
+  /@types/serve-static/1.13.2:
+    dependencies:
+      '@types/express-serve-static-core': 4.16.0
+      '@types/mime': 2.0.0
+    dev: true
+    resolution:
+      integrity: sha512-/BZ4QRLpH/bNYgZgwhKEh+5AsboDBcUdlBYgzoLX0fpj3Y2gp6EApyOlM3bK53wQS/OE1SrdSYBAbux2D1528Q==
+  /@types/undertaker-registry/1.0.1:
+    dev: true
+    resolution:
+      integrity: sha512-Z4TYuEKn9+RbNVk1Ll2SS4x1JeLHecolIbM/a8gveaHsW0Hr+RQMraZACwTO2VD7JvepgA6UO1A1VrbktQrIbQ==
+  /@types/undertaker/1.2.0:
+    dependencies:
+      '@types/events': 1.2.0
+      '@types/undertaker-registry': 1.0.1
+    dev: true
+    resolution:
+      integrity: sha512-bx/5nZCGkasXs6qaA3B6SVDjBZqdyk04UO12e0uEPSzjt5H8jEJw0DKe7O7IM0hM2bVHRh70pmOH7PEHqXwzOw==
+  /@types/vinyl-fs/2.4.8:
+    dependencies:
+      '@types/glob-stream': 6.1.0
+      '@types/node': 10.5.1
+      '@types/vinyl': 2.0.2
+    dev: true
+    resolution:
+      integrity: sha512-yE2pN9OOrxJVeO7IZLHAHrh5R4Q0osbn5WQRuQU6GdXoK7dNFrMK3K7YhATkzf3z0yQBkol3+gafs7Rp0s7dDg==
+  /@types/vinyl/2.0.2:
+    dependencies:
+      '@types/node': 10.5.1
+    dev: true
+    resolution:
+      integrity: sha512-2iYpNuOl98SrLPBZfEN9Mh2JCJ2EI9HU35SfgBEb51DcmaHkhp8cKMblYeBqMQiwXMgAD3W60DbQ4i/UdLiXhw==
   /accepts/1.3.5:
     dependencies:
       mime-types: 2.1.18
@@ -3038,6 +3184,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-TbwEcrFWvlCgsoaFXRvQsMZWCYo=
+  /lodash.range/3.2.0:
+    dev: true
+    resolution:
+      integrity: sha1-9GHliPZmg/fq3q3lE+OKaaVloV0=
   /lodash.restparam/3.6.1:
     dev: true
     resolution:
@@ -4044,6 +4194,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-5h+MvEjnzu1qy6MabjuoPatsGAjjDV9B24e7Cktjl+ClNtjVjmvAXjOFQr1u7RlWULKNGYaYVE4s+DIIQ4bOGA==
+  /postcss-simple-vars/4.1.0:
+    dependencies:
+      postcss: 6.0.23
+    dev: true
+    resolution:
+      integrity: sha512-J/TRomA8EqXhS4VjQJsPCYTFIa9FYN/dkJK/8oZ0BYeVIPx91goqM8T+ljsP57+4bwSEywFOuB7EZ8n1gjjxZw==
   /postcss-syntax/0.28.0/postcss@6.0.23:
     dependencies:
       postcss: 6.0.23
@@ -5655,7 +5811,14 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 8
 shrinkwrapVersion: 3
 specifiers:
-  '@exe-boss/eslint-config': ^0.1.0
+  '@exe-boss/eslint-config': 0.1.0
+  '@types/autoprefixer': '*'
+  '@types/browser-sync': '*'
+  '@types/gulp': '*'
+  '@types/gulp-sourcemaps': '*'
+  '@types/lodash.range': ^3.2.3
+  '@types/merge-stream': '*'
+  '@types/node': '*'
   autoprefixer: ^8.5.0
   bootstrap: ^4.1.1
   browser-sync: ^2.24.4
@@ -5667,10 +5830,12 @@ specifiers:
   gulp-rename: ^1.2.3
   gulp-sourcemaps: ^2.6.4
   gulp-stylelint: ^7.0.0
+  lodash.range: ^3.2.0
   merge-stream: ^1.0.1
   postcss: ^6.0.22
   postcss-import: ^11.1.0
   postcss-scopify: 'git+https://github.com/ExE-Boss/postcss-scopify.git#selector/ampersand'
+  postcss-simple-vars: ^4.1.0
   stylelint: ^9.2.1
   stylelint-config-recommended: ^2.1.0
   yargs: ^12.0.1

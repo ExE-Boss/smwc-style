@@ -28,33 +28,45 @@ const sourcemaps	= require("gulp-sourcemaps");
 const autoprefixer	= require("autoprefixer");
 const postcssImport	= require("postcss-import");
 const postcssScopify	= require("postcss-scopify");
+const postcssVariables	= require("postcss-simple-vars");
 
+const range	= require("lodash.range");
 
 const argsBuilder = require("yargs")
-	.exitProcess(false)
-	.option("dest", {
-		alias: "destination",
-		default: "./dist"
-	});
+	.option("destination", {
+		alias: ["dest", "d"],
+		default: "./dist/",
+		description: "The destination folder for all build processes",
+	})
+	.alias("help", ["h", "?"])
+	.alias("version", "V");
+const args = argsBuilder.parse(process.argv);
+
+/* Constants */
+
+const LINE_NUMBERS = range(1,10000).join("\\A ");
 
 /* Building */
 
 gulp.task("post-layout", () => {
-	const args = argsBuilder.argv;
+	/** @return {NodeJS.ReadWriteStream} */
 	const streamFactory = () => gulp.src("./src/post-layout/exe-boss.css")
 		.pipe(sourcemaps.init())
 		.pipe(postcss(() => ({
 			plugins: [
 				postcssImport({path: ["./node_modules/bootstrap/dist/css/"]}),
 				postcssScopify(".exe-boss-post-root"),
-				autoprefixer({cascade: false})
-			]
+				postcssVariables({variables:{
+					"line-numbers": LINE_NUMBERS,
+				}}),
+				autoprefixer({cascade: false}),
+			],
 		})));
 
 	return mergeStream(
 		streamFactory()
 			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest(args.dest || "./dist"))
+			.pipe(gulp.dest(args.dest))
 			.pipe(browserSync.stream()),
 		streamFactory()
 			.pipe(cleanCSS())
@@ -62,25 +74,23 @@ gulp.task("post-layout", () => {
 				? path.basename.replace(/\.css/, ".min.css")
 				: `${path.basename}.min`))
 			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest(args.dest || "./dist"))
+			.pipe(gulp.dest(args.dest))
 			.pipe(browserSync.stream())
 	);
 });
 
 gulp.task("post-layout-html", () => {
-	const args = argsBuilder.argv;
-
 	return gulp.src("./src/post-layout/smw-central.html")
-		.pipe(gulp.dest(args.dest || "./dist"));
+		.pipe(gulp.dest(args.dest));
 });
 
 gulp.task("serve", ["post-layout", "post-layout-html"], () => {
 	gulp.src("./src/post-layout/smw-central.html")
-		.pipe(gulp.dest("./dist"));
+		.pipe(gulp.dest(args.dest));
 
 	browserSync.init({
 		open: false,
-		server: "./dist"
+		server: args.dest,
 	});
 
 	gulp.watch("./src/post-layout/*.css",	["post-layout"]);
