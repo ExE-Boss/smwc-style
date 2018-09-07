@@ -45,7 +45,7 @@
 		"postcss": "^7.0.1",
 		"postcss-import": "^12.0.0",
 		"postcss-scopify": "git+https://github.com/ExE-Boss/postcss-scopify.git#selector/ampersand",
-		"postcss-simple-vars": "^4.1.0",
+		"postcss-simple-vars": "^5.0.1",
 		"stylelint": "^9.2.1",
 		"stylelint-config-recommended": "^2.1.0",
 		"yargs": "^12.0.1"
