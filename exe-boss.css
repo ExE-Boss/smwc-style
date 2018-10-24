@@ -346,9 +346,11 @@
 	background:	rgba(195,195,195,0.435);
 	background:	linear-gradient(to bottom,rgba(209,209,209,0.42) 0%,rgba(182,182,182,0.45) 100%);
 }
+.exe-boss-post-root code,
 .exe-boss-post-root .spoiler {
 	display:	inline;
 	border: 	none;
+	border-radius: 2px;
 
 	padding:	0 4px;
 	padding:	0 .25em;
@@ -433,8 +435,14 @@
 	border-radius:	4px;
 
 	line-height:	21px;
-	background:	#EEE;
 	color:	#333;
+	background:	#EEE;
+}
+.exe-boss-post-root code {
+	background: #EEE5;
+}
+.exe-boss-post-root > .exe-boss-post-footer code {
+	background: none;
 }
 /* Line numbers */
 .exe-boss-post-root pre.box.line-numbers,
