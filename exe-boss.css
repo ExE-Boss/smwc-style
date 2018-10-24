@@ -380,27 +380,6 @@
 	display:	block;
 }
 /* Boxes > Quotes */
-.exe-boss-post-root .quote > .boxhead {
-	position:	relative;
-	color:	#BFEBFF !important;
-}
-.exe-boss-post-root .quote > .boxhead::before {
-	position:	absolute;
-	color:	#FFF !important;
-
-	content:	"Originally posted by";
-	cursor:	text;
-
-	top:	0;
-	left:	0;
-	bottom:	0;
-}
-.exe-boss-post-root .quote > .boxhead:-webkit-any-link::before {
-	cursor:	inherit;
-}
-.exe-boss-post-root .quote > .boxhead:any-link::before {
-	cursor:	inherit;
-}
 .exe-boss-post-root blockquote,
 .exe-boss-post-root .quote > .box {
 	padding:	1em;
