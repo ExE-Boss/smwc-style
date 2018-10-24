@@ -6,7 +6,7 @@ sudo: false
 language: node_js
 
 node_js:
-    - "stable"
+    - 10
 
 # The pre-install script
 before_install:
