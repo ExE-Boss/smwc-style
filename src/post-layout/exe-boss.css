@@ -103,27 +103,6 @@ code,
 
 /* Boxes > Quotes */
 
-.quote > .boxhead {
-	position:	relative;
-	color:	#BFEBFF !important;
-}
-
-.quote > .boxhead::before {
-	position:	absolute;
-	color:	#FFF !important;
-
-	content:	"Originally posted by";
-	cursor:	text;
-
-	top:	0;
-	left:	0;
-	bottom:	0;
-}
-
-.quote > .boxhead:any-link::before {
-	cursor:	inherit;
-}
-
 blockquote,
 .quote > .box {
 	padding:	1em;
