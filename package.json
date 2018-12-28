@@ -3,52 +3,55 @@
 	"version": "0.1.0",
 	"description": "SMW Central Post Layout",
 	"author": "ExE Boss",
+	"license": "GPL-3.0",
+	"private": true,
+
 	"scripts": {
 		"build": "./bin/build",
 		"lint": "gulp lint && eslint **/*.js",
 		"post-layout": "gulp post-layout"
 	},
+
+	"homepage": "https://github.com/ExE-Boss/smwc-style#readme",
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@github.com/ExE-Boss/smwc-style.git"
 	},
-	"private": true,
-	"license": "GPL-3.0",
 	"bugs": {
 		"url": "https://github.com/ExE-Boss/smwc-style/issues"
 	},
-	"homepage": "https://github.com/ExE-Boss/smwc-style#readme",
+
 	"dependencies": {
-		"bootstrap": "^4.1.1"
+		"bootstrap": "4.2.1"
 	},
 	"devDependencies": {
 		"@exe-boss/eslint-config": "0.1.3",
-		"@types/autoprefixer": "*",
-		"@types/browser-sync": "*",
-		"@types/gulp": "*",
-		"@types/gulp-sourcemaps": "*",
-		"@types/lodash.range": "*",
-		"@types/merge-stream": "*",
-		"@types/node": "*",
-		"autoprefixer": "^9.0.2",
-		"browser-sync": "^2.24.4",
-		"eslint": "^5.0.1",
-		"gulp": "^3.9.1",
-		"gulp-clean-css": "^4.0.0",
-		"gulp-cli": "^2.0.1",
-		"gulp-postcss": "^8.0.0",
-		"gulp-rename": "^1.2.3",
-		"gulp-sourcemaps": "^2.6.4",
-		"gulp-stylelint": "^8.0.0",
-		"lodash.range": "^3.2.0",
-		"merge-stream": "^1.0.1",
-		"postcss": "^7.0.1",
-		"postcss-import": "^12.0.0",
+		"@types/autoprefixer": "9.1.1",
+		"@types/browser-sync": "0.0.42",
+		"@types/gulp": "4.0.5",
+		"@types/gulp-sourcemaps": "0.0.32",
+		"@types/lodash.range": "3.2.4",
+		"@types/merge-stream": "1.1.2",
+		"@types/node": "10.12.18",
+		"autoprefixer": "9.4.3",
+		"browser-sync": "2.26.3",
+		"eslint": "5.11.1",
+		"gulp": "3.9.1",
+		"gulp-clean-css": "4.0.0",
+		"gulp-cli": "2.0.1",
+		"gulp-postcss": "8.0.0",
+		"gulp-rename": "1.4.0",
+		"gulp-sourcemaps": "2.6.4",
+		"gulp-stylelint": "8.0.0",
+		"lodash.range": "3.2.0",
+		"merge-stream": "1.0.1",
+		"postcss": "7.0.7",
+		"postcss-import": "12.0.1",
 		"postcss-scopify": "git+https://github.com/ExE-Boss/postcss-scopify.git#selector/ampersand",
-		"postcss-simple-vars": "^5.0.1",
-		"stylelint": "^9.2.1",
-		"stylelint-config-recommended": "^2.1.0",
-		"yargs": "^12.0.1"
+		"postcss-simple-vars": "5.0.1",
+		"stylelint": "9.9.0",
+		"stylelint-config-recommended": "2.1.0",
+		"yargs": "12.0.5"
 	},
 	"browserslist": [
 		"> 0.5%",
