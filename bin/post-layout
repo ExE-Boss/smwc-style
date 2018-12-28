@@ -13,4 +13,4 @@ if [ $# -ge 1 ]; then
 	rm -rf "$basedir/$dir/*"
 fi
 
-pnpx gulp post-layout --dest "$basedir/$dir"
+gulp dist --dest "$basedir/$dir"

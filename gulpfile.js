@@ -31,12 +31,20 @@ const postcssScopify	= require("postcss-scopify");
 const postcssVariables	= require("postcss-simple-vars");
 
 const range	= require("lodash.range");
+const path = require("path");
+const del = require("del");
 
 const argsBuilder = require("yargs")
 	.option("destination", {
 		alias: ["dest", "d"],
 		default: "./dist/",
 		description: "The destination folder for all build processes",
+		type: "string",
+	})
+	.option("force", {
+		alias: "f",
+		default: false,
+		description: "If the script is allowed to clean files outside the directory",
 	})
 	.alias("help", ["h", "?"])
 	.alias("version", "V");
@@ -44,7 +52,7 @@ const args = argsBuilder.parse(process.argv);
 
 /* Constants */
 
-const LINE_NUMBERS = range(1,10000).join("\\A ");
+const LINE_NUMBERS = range(1, 10000).join("\\A ");
 
 /* Building */
 
@@ -65,32 +73,30 @@ gulp.task("post-layout", () => {
 
 	return mergeStream(
 		streamFactory()
-			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest(args.dest))
-			.pipe(browserSync.stream()),
+			.pipe(sourcemaps.write(".")),
 		streamFactory()
 			.pipe(cleanCSS())
 			.pipe(gulpRename(path => path.basename = /\.css/.test(path.basename)
 				? path.basename.replace(/\.css/, ".min.css")
 				: `${path.basename}.min`))
 			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest(args.dest))
-			.pipe(browserSync.stream())
-	);
+	)
+		.pipe(gulp.dest("./build/"))
+		.pipe(browserSync.stream());
 });
 
 gulp.task("post-layout-html", () => {
 	return gulp.src("./src/post-layout/smw-central.html")
-		.pipe(gulp.dest(args.dest));
+		.pipe(gulp.dest("./build/"));
 });
 
 gulp.task("serve", ["post-layout", "post-layout-html"], () => {
 	gulp.src("./src/post-layout/smw-central.html")
-		.pipe(gulp.dest(args.dest));
+		.pipe(gulp.dest("./build/"));
 
 	browserSync.init({
 		open: false,
-		server: args.dest,
+		server: "build",
 	});
 
 	gulp.watch("./src/post-layout/*.css",	["post-layout"]);
@@ -115,4 +121,22 @@ gulp.task("post-layout-lint", () => {
 				console: true,
 			}],
 		}));
+});
+
+/* Distribution */
+
+gulp.task("clean:dist", () => {
+	const dest = path.resolve(args.dest);
+	return del([
+		`${dest}/**/*`,
+	]);
+});
+
+gulp.task("dist", ["post-layout", "clean:dist"], () => {
+	const dest = path.resolve(args.dest);
+	return gulp.src([
+		"./build/**/*.min.+([^.])",
+		"./build/**/*.min.+([^.]).map",
+	])
+		.pipe(gulp.dest(dest));
 });

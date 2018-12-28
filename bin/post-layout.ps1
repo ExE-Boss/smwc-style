@@ -5,7 +5,7 @@ Param(
 	[String] $Destination = "dist"	# The build destination
 );
 
-$basedir=(Split-Path $MyInvocation.MyCommand.Definition -Parent)+'\..'
+$basedir = Split-Path (Split-Path $MyInvocation.MyCommand.Definition -Parent) -Parent
 
 if (-not [System.IO.Path]::GetFullPath("$basedir/$Destination").StartsWith([System.IO.Path]::GetFullPath($basedir))) {
 	if (-not (Test-Path "$basedir/$Destination")) {
@@ -14,4 +14,4 @@ if (-not [System.IO.Path]::GetFullPath("$basedir/$Destination").StartsWith([Syst
 	Remove-Item "$basedir/$Destination/*" -Force -Recurse -Exclude ".*"
 }
 
-pnpx gulp post-layout --dest "$basedir/$Destination"
+gulp dist --dest "$basedir/$Destination"

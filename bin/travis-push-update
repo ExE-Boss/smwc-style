@@ -4,8 +4,13 @@
 # See: https://docs.travis-ci.com/user/deployment/
 set -ev
 
+dir=dist
+if [ $# -ge 1 ]; then
+	dir=$1
+fi
+
 if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then
-	cd ../gh-pages
+	cd $dir
 	git add -A
 	git config --global user.email "contact@travis-ci.org"
 	git config --global user.name "Travis CI"

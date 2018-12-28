@@ -5,13 +5,11 @@
 	"author": "ExE Boss",
 	"license": "GPL-3.0",
 	"private": true,
-
 	"scripts": {
 		"build": "./bin/build",
 		"lint": "gulp lint && eslint **/*.js",
 		"post-layout": "gulp post-layout"
 	},
-
 	"homepage": "https://github.com/ExE-Boss/smwc-style#readme",
 	"repository": {
 		"type": "git",
@@ -20,7 +18,6 @@
 	"bugs": {
 		"url": "https://github.com/ExE-Boss/smwc-style/issues"
 	},
-
 	"dependencies": {
 		"bootstrap": "4.2.1"
 	},
@@ -33,12 +30,13 @@
 		"@types/lodash.range": "3.2.4",
 		"@types/merge-stream": "1.1.2",
 		"@types/node": "10.12.18",
+		"@types/yargs": "12.0.4",
 		"autoprefixer": "9.4.3",
 		"browser-sync": "2.26.3",
+		"del": "3.0.0",
 		"eslint": "5.11.1",
 		"gulp": "3.9.1",
 		"gulp-clean-css": "4.0.0",
-		"gulp-cli": "2.0.1",
 		"gulp-postcss": "8.0.0",
 		"gulp-rename": "1.4.0",
 		"gulp-sourcemaps": "2.6.4",
