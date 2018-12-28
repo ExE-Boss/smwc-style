@@ -6,7 +6,7 @@ sudo: false
 language: node_js
 
 node_js:
-    - 10
+    - "10"
 
 # The pre-install script
 before_install:
@@ -15,7 +15,7 @@ before_install:
 
 # The install script
 install:
-    - pnpm install
+    - pnpm install --prefer-frozen-shrinkwrap
 
 # The pre-build script
 before_script:
