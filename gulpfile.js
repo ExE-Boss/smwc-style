@@ -106,13 +106,13 @@ gulp.task("post-layout-lint", () => {
 	return gulp.src("./src/post-layout/**/*.css")
 		.pipe(postcss(() => ({
 			plugins: [
-				postcssScopify(".exe-boss-post-root")
-			]
+				postcssScopify(".exe-boss-post-root"),
+			],
 		})))
 		.pipe(stylelint({
 			reporters: [{
 				formatter: "string",
-				console: true
-			}]
+				console: true,
+			}],
 		}));
 });

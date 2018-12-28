@@ -15,7 +15,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 "use strict";
-/* eslint comma-dangle: ["error", "always"] */
 /* eslint sort-keys: ["error", "asc"] */
 
 module.exports = {
@@ -29,10 +28,4 @@ module.exports = {
 		sourceType: "script",
 	},
 	root: true,
-	rules: {
-		"comma-dangle": [
-			"error",
-			"only-multiline",
-		],
-	},
 };
