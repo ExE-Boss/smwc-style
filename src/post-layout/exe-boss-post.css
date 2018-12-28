@@ -1,0 +1,191 @@
+/*
+ * Copyright (C) 2018 ExE Boss
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+& {
+	display:	flex;
+	flex-direction:	column;
+
+	color:	#EEE;
+	background:	#002F5F;
+	background:	linear-gradient(to bottom, #001F3F 0%, #003F7F 100%);
+
+	height:	100%;
+	min-height:	208px;
+}
+
+a {
+	color:	#BFEBFF !important;
+	font-weight:	normal;
+	text-decoration:	none;
+}
+
+a:hover {
+	text-decoration:	underline;
+}
+
+.postpadding > & {
+	margin:	-1px	-4px;
+}
+
+& > .exe-boss-post-main {
+	display:	block;
+	margin: 	1em;
+	flex-grow:	1;
+}
+
+& > .exe-boss-post-footer {
+	display:	flex;
+	flex-direction:	column;
+
+	padding:	.5em 1em;
+
+	background:	rgba(195,195,195,0.435);
+	background:	linear-gradient(to bottom,rgba(209,209,209,0.42) 0%,rgba(182,182,182,0.45) 100%);
+}
+
+code,
+.spoiler {
+	display:	inline;
+	border: 	none;
+	border-radius: 2px;
+
+	padding:	0 4px;
+	padding:	0 .25em;
+	padding:	0 .5ch;
+}
+
+.spoiler > .spoilerInner {
+	visibility:	visible	!important;
+	transition:	.25s opacity;
+
+	opacity:	0;
+	padding:	0;
+}
+
+.spoiler:hover > .spoilerInner {
+	opacity:	1;
+}
+
+/* Boxes */
+
+.code + br,
+.quote + br {
+	display:	none;
+}
+
+.boxhead {
+	margin-left:	4px;
+	margin-bottom:	4px;
+	font-size:	14px !important;
+	font-size:	87.5% !important;
+	color:	#EEE !important;
+	display:	block;
+}
+
+/* Boxes > Quotes */
+
+blockquote,
+.quote > .box {
+	padding:	1em;
+	background:	rgba(195,195,195,0.2175);
+	background:	linear-gradient(to bottom,rgba(209,209,209,0.21) 0%,rgba(182,182,182,0.225) 100%);
+
+	border:	1px	solid #AAA;
+	border-radius:	4px;
+}
+
+/* Boxes > Code blocks */
+
+code,
+pre,
+.code > pre,
+.code > pre.box {
+	font-size:	14px;
+	font-size:	87.5%;
+	font-family:	"Input Mono", "Consolas", "Lucida Console", monospace !important;
+	font-stretch:	condensed;
+}
+
+pre,
+.code > pre,
+.code > pre.box {
+	white-space:	pre-wrap;
+}
+
+pre.box,
+.code > pre.box {
+	position:	relative;
+	padding:	16px;
+
+	border:	none;
+	border-left:	5px solid #59B;
+	border-radius:	4px;
+
+	line-height:	21px;
+	color:	#333;
+	background:	#EEE;
+}
+
+code {
+	background: #EEE5;
+}
+
+& > .exe-boss-post-footer code {
+	background: none;
+}
+
+/* Line numbers */
+
+pre.box.line-numbers,
+.code > pre.box {
+	padding-left:	65.65px;
+	padding-left:	calc(7.25ch + 1px);
+}
+
+pre.box.line-numbers::before,
+.code > pre.box::before {
+	box-sizing:	border-box;
+	position:	absolute;
+	display:	block;
+
+	top:	16px;
+	left:	0px;
+	bottom:	16px;
+
+	color:	#888;
+
+	min-width:	46px;
+	min-width:	5.75ch;
+	padding-right:	12px;
+	padding-right:	1.5ch;
+	text-align:	right;
+
+	content:	"";
+	overflow:	hidden;
+	border-right:	1px solid #999;
+}
+
+pre.box.line-numbers::after,
+.code > pre.box::after {
+	display:	inline;
+	content:	" ";
+}
+
+pre.box.line-numbers::before,
+.code > pre.box::before {
+	content: "$line-numbers";
+}
