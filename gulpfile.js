@@ -50,6 +50,8 @@ const argsBuilder = require("yargs")
 	.alias("version", "V");
 const args = argsBuilder.parse(process.argv);
 
+const {toArray} = require("./util/index.js");
+
 /* Constants */
 
 const LINE_NUMBERS = range(1, 10000).join("\\A ");
@@ -90,7 +92,7 @@ gulp.task("post-layout-html", () => {
 		.pipe(gulp.dest("./build/"));
 });
 
-gulp.task("serve", ["post-layout", "post-layout-html"], () => {
+gulp.task("serve", gulp.series(gulp.parallel("post-layout", "post-layout-html"), () => {
 	gulp.src("./src/post-layout/smw-central.html")
 		.pipe(gulp.dest("./build/"));
 
@@ -99,29 +101,34 @@ gulp.task("serve", ["post-layout", "post-layout-html"], () => {
 		server: "build",
 	});
 
-	gulp.watch("./src/post-layout/*.css",	["post-layout"]);
-	gulp.watch("./src/post-layout/*.html",	["post-layout-html"])
+	gulp.watch("./src/post-layout/*.css",	gulp.series("post-layout"));
+	gulp.watch("./src/post-layout/*.html",	gulp.series("post-layout-html"))
 		.on("change", browserSync.reload);
-});
+}));
 
 /* Linting */
 
-gulp.task("lint", ["post-layout-lint"]);
-
-gulp.task("post-layout-lint", () => {
-	return gulp.src("./src/post-layout/**/*.css")
-		.pipe(postcss(() => ({
-			plugins: [
-				postcssScopify(".exe-boss-post-root"),
-			],
-		})))
-		.pipe(stylelint({
-			reporters: [{
-				formatter: "string",
-				console: true,
-			}],
-		}));
+const lintTasks = toArray({
+	/**
+	 * @return {NodeJS.ReadWriteStream}
+	 */
+	"lint:post-layout"() {
+		return gulp.src("./src/post-layout/**/*.css")
+			.pipe(postcss(() => ({
+				plugins: [
+					postcssScopify(".exe-boss-post-root"),
+				],
+			})))
+			.pipe(stylelint({
+				reporters: [{
+					formatter: "string",
+					console: true,
+				}],
+			}));
+	},
 });
+
+gulp.task("lint", gulp.parallel(...lintTasks));
 
 /* Distribution */
 
@@ -132,11 +139,11 @@ gulp.task("clean:dist", () => {
 	]);
 });
 
-gulp.task("dist", ["post-layout", "clean:dist"], () => {
+gulp.task("dist", gulp.series(gulp.parallel("post-layout", "clean:dist"), () => {
 	const dest = path.resolve(args.dest);
 	return gulp.src([
 		"./build/**/*.min.+([^.])",
 		"./build/**/*.min.+([^.]).map",
 	])
 		.pipe(gulp.dest(dest));
-});
+}));

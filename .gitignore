@@ -5,6 +5,7 @@
 ## Sources
 !/bin
 !/src
+!/util
 
 ## Git
 !/.gitattributes
