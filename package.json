@@ -31,7 +31,7 @@
 		"@types/merge-stream": "1.1.2",
 		"@types/node": "10.12.18",
 		"@types/yargs": "12.0.4",
-		"autoprefixer": "9.4.3",
+		"autoprefixer": "9.4.4",
 		"browser-sync": "2.26.3",
 		"del": "3.0.0",
 		"eslint": "5.11.1",
