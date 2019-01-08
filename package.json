@@ -43,7 +43,7 @@
 		"gulp-stylelint": "8.0.0",
 		"lodash.range": "3.2.0",
 		"merge-stream": "1.0.1",
-		"postcss": "7.0.7",
+		"postcss": "7.0.8",
 		"postcss-import": "12.0.1",
 		"postcss-scopify": "git+https://github.com/ExE-Boss/postcss-scopify.git#selector/ampersand",
 		"postcss-simple-vars": "5.0.1",
