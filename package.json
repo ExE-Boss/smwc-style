@@ -29,7 +29,7 @@
 		"@types/gulp-sourcemaps": "0.0.32",
 		"@types/lodash.range": "3.2.4",
 		"@types/merge-stream": "1.1.2",
-		"@types/node": "10.12.18",
+		"@types/node": "10.12.22",
 		"@types/yargs": "12.0.4",
 		"autoprefixer": "9.4.3",
 		"browser-sync": "2.26.3",
