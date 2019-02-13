@@ -19,7 +19,7 @@
 		"url": "https://github.com/ExE-Boss/smwc-style/issues"
 	},
 	"dependencies": {
-		"bootstrap": "4.2.1"
+		"bootstrap": "4.3.0"
 	},
 	"devDependencies": {
 		"@exe-boss/eslint-config": "0.1.3",
