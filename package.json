@@ -33,7 +33,7 @@
 		"@types/yargs": "12.x",
 		"autoprefixer": "^9.4.7",
 		"browser-sync": "^2.26.3",
-		"del": "^3.0.0",
+		"del": "^4.0.0",
 		"eslint": "^5.13.0",
 		"gulp": "^4.0.0",
 		"gulp-clean-css": "^4.0.0",
