@@ -23,8 +23,6 @@ install:
 before_script:
     - greenkeeper-lockfile-update
     - pnpm run lint
-    - chmod u+x ./bin/post-layout
-    - chmod u+x ./bin/travis-push-update
 
 # The build script
 script:
