@@ -30,7 +30,7 @@
 		"@types/lodash.range": "3.x",
 		"@types/merge-stream": "1.x",
 		"@types/node": "10.x",
-		"@types/yargs": "12.x",
+		"@types/yargs": "^13.0.0",
 		"autoprefixer": "^9.4.7",
 		"browser-sync": "^2.26.3",
 		"del": "^3.0.0",
