@@ -21,7 +21,7 @@
 !/gulpfile*
 !/package*
 !/yarn*
-!/shrinkwrap*
+!/pnpm*
 !/.*ignore
 
 ## Travis CI
@@ -36,3 +36,4 @@
 ehthumbs.db
 Thumbs.db
 *~
+*.log
