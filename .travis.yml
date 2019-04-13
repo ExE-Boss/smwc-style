@@ -12,8 +12,8 @@ node_js:
 
 # The pre-install script
 before_install:
-    - npm i -g pnpm
-    - pnpm i -g greenkeeper-lockfile@1 gulp-cli@2
+    - curl -L https://unpkg.com/@pnpm/self-installer | node
+    - pnpm i -g gulp-cli@2
 
 # The install script
 install:
@@ -21,16 +21,11 @@ install:
 
 # The pre-build script
 before_script:
-    - greenkeeper-lockfile-update
     - pnpm run lint
 
 # The build script
 script:
     - ./bin/post-layout $BUILD_DIR
-
-# The post-build script
-after_script:
-    - greenkeeper-lockfile-upload
 
 # The commit script
 after_success:
