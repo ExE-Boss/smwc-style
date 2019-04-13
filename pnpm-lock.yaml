@@ -26,7 +26,7 @@ devDependencies:
   postcss-import: 12.0.1
   postcss-scopify: github.com/ExE-Boss/postcss-scopify/d635b154b70b78db1b57a0bf017619d81d28c574
   postcss-simple-vars: 5.0.2
-  stylelint: 9.10.1
+  stylelint: 10.0.0
   stylelint-config-recommended: 2.1.0
   yargs: 13.2.2
 lockfileVersion: 5
@@ -790,6 +790,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-aNdbnj9P8PjdXU4ybaWLK2IF3jc/EoDYbC7AazW6to3TRsfXxscC9UXOB5iDiEQrkyIbWp2SLQda4+QAa7nc3w==
+  /braces/3.0.1:
+    dependencies:
+      fill-range: 7.0.1
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-Vmyh3JAr5DRUKCdRrC+WyAAsWBez8HLnBmVb6Ux2VYbvC8DjqMC228WHx24fiQG5BiDOVo+otK1scdkK5S6YNg==
   /browser-sync-client/2.26.2:
     dependencies:
       etag: 1.8.1
@@ -1541,6 +1549,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-CwBLREIQ7LvYFB0WyRvwhq5N5qPhc6PMjD6bYggFlI5YyDgl+0vxq5VHbMOFqLg7hfWzmu8T5Z1QofhmTIhItA==
+  /emoji-regex/8.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
   /encodeurl/1.0.2:
     dev: true
     engines:
@@ -1943,14 +1955,6 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-OrGi0qYsi/tDGgyUy3l6L84nyWI=
-  /file-entry-cache/4.0.0:
-    dependencies:
-      flat-cache: 2.0.1
-    dev: true
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha512-AVSwsnbV8vH/UVbvgEhf3saVQXORNv0ZzSkvkhQIaia5Tia+JhGTaa/ePUSVoPHQyGayQNmYfkzFi3WZV5zcpA==
   /file-entry-cache/5.0.1:
     dependencies:
       flat-cache: 2.0.1
@@ -1988,6 +1992,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-1USBHUKPmOsGpj3EAtJAPDKMOPc=
+  /fill-range/7.0.1:
+    dependencies:
+      to-regex-range: 5.0.1
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==
   /finalhandler/1.1.0:
     dependencies:
       debug: 2.6.9
@@ -2906,6 +2918,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-o7MKXE8ZkYMWeqq5O+764937ZU8=
+  /is-fullwidth-code-point/3.0.0:
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==
   /is-glob/2.0.1:
     dependencies:
       is-extglob: 1.0.0
@@ -2968,6 +2986,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-rSklcAIlf1OmFdyAqbnWTLVelsQ58uvZ66S/ZyawjWqIviTWCjg2PzVGw8WUA+nNuPTqb4wgA+NszrJ+08LlgQ==
+  /is-number/7.0.0:
+    dev: true
+    engines:
+      node: '>=0.12.0'
+    resolution:
+      integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
   /is-obj/1.0.1:
     dev: true
     engines:
@@ -3198,10 +3222,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
-  /known-css-properties/0.11.0:
+  /known-css-properties/0.13.0:
     dev: true
     resolution:
-      integrity: sha512-bEZlJzXo5V/ApNNa5z375mJC6Nrz4vG43UgcSCrg2OHC+yuB6j0iDSrY7RQ/+PRofFB03wNIIt9iXIVLr4wc7w==
+      integrity: sha512-6VWDxNr7cQXPDtMdCWLZMK3E8hdLrpyPPRdx6RbyvqklqgM6/XNFsVopv8QOZ+hRB6iHG/urEDwzlWbmMCv/kw==
   /last-run/1.1.1:
     dependencies:
       default-resolution: 2.0.0
@@ -3243,12 +3267,12 @@ packages:
       node: '>= 0.10'
     resolution:
       integrity: sha1-bxT5mje+Op3XhPVJVpDlkDRm7kI=
-  /leven/2.1.0:
+  /leven/3.1.0:
     dev: true
     engines:
-      node: '>=0.10.0'
+      node: '>=6'
     resolution:
-      integrity: sha1-wuep93IJTe6dNCAq6KzORoeHVYA=
+      integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==
   /levn/0.3.0:
     dependencies:
       prelude-ls: 1.1.2
@@ -3533,6 +3557,15 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-MWikgl9n9M3w+bpsY3He8L+w9eF9338xRl8IAO5viDizwSzziFEyUzo2xrrloB64ADbTf8uA8vRqqttDTOmccg==
+  /micromatch/4.0.1:
+    dependencies:
+      braces: 3.0.1
+      picomatch: 2.0.3
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-6yawNHAc4S9Dh81xZCkZ5sXKH0/ly0t1DiOc+rnqzi0OvwS4DgRZU+HYTNDIgULgZXTNw5N8Vhxh2va8nEO6BA==
   /mime-db/1.38.0:
     dev: true
     engines:
@@ -4140,6 +4173,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-T2ZUsdZFHgA3u4e5PfPbjd7HDDpxPnQb5jN0SrDsjNSuVXHJqtwTnWqG0B1jZrgmJ/7lj1EmVIByWt1gxGkWvg==
+  /picomatch/2.0.3:
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-NSJqCeCfH7loxpU6i04aBiJZv4oZFlLKTLTyoWCpJnC28Qm0T1XUfNfzwLi+vtFNGIjc9pyvx/NJUJhFQ3Ptdg==
   /pify/2.3.0:
     dev: true
     engines:
@@ -5198,6 +5237,16 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-vafcv6KjVZKSgz06oM/H6GDBrAtz8vdhQakGjFIvNrHA6y3HCF1CInLy+QLq8dTJPQ1b+KDUqDFctkdRW44e1w==
+  /string-width/4.1.0:
+    dependencies:
+      emoji-regex: 8.0.0
+      is-fullwidth-code-point: 3.0.0
+      strip-ansi: 5.2.0
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-NrX+1dVVh+6Y9dnQ19pR0pP4FiEIlUvdTGn8pw6CKTNq5sgib2nIhmUNT5TAmhWmvKr3WcxBcP3E8nWezuipuQ==
   /string_decoder/1.1.1:
     dependencies:
       safe-buffer: 5.1.2
@@ -5291,7 +5340,7 @@ packages:
       stylelint: ^8.3.0 || ^9.0.0
     resolution:
       integrity: sha512-ajMbivOD7JxdsnlS5945KYhvt7L/HwN6YeYF2BH6kE4UCLJR0YvXMf+2j7nQpJyYLZx9uZzU5G1ZOSBiWAc6yA==
-  /stylelint/9.10.1:
+  /stylelint/10.0.0:
     dependencies:
       autoprefixer: 9.5.1
       balanced-match: 1.0.0
@@ -5299,7 +5348,7 @@ packages:
       cosmiconfig: 5.2.0
       debug: 4.1.1
       execall: 1.0.0
-      file-entry-cache: 4.0.0
+      file-entry-cache: 5.0.1
       get-stdin: 6.0.0
       global-modules: 2.0.0
       globby: 9.2.0
@@ -5308,13 +5357,13 @@ packages:
       ignore: 5.0.6
       import-lazy: 3.1.0
       imurmurhash: 0.1.4
-      known-css-properties: 0.11.0
-      leven: 2.1.0
+      known-css-properties: 0.13.0
+      leven: 3.1.0
       lodash: 4.17.11
       log-symbols: 2.2.0
       mathml-tag-names: 2.1.0
       meow: 5.0.0
-      micromatch: 3.1.10
+      micromatch: 4.0.1
       normalize-selector: 0.2.0
       pify: 4.0.1
       postcss: 7.0.14
@@ -5335,17 +5384,17 @@ packages:
       signal-exit: 3.0.2
       slash: 2.0.0
       specificity: 0.4.1
-      string-width: 3.1.0
+      string-width: 4.1.0
       style-search: 0.1.0
       sugarss: 2.0.0
       svg-tags: 1.0.0
       table: 5.2.3
     dev: true
     engines:
-      node: '>=6'
+      node: '>=8.15.1'
     hasBin: true
     resolution:
-      integrity: sha512-9UiHxZhOAHEgeQ7oLGwrwoDR8vclBKlSX7r4fH0iuu0SfPwFaLkb1c7Q2j1cqg9P7IDXeAV2TvQML/fRQzGBBQ==
+      integrity: sha512-0WeIef88OPPLwbIDpHiHx56YJEPRuTuxkDwcqpFW626nGzykBBxbPk4z4Hbqb/mYPJ9AcEDZoOcPD8t4TcckZw==
   /sugarss/2.0.0:
     dependencies:
       postcss: 7.0.14
@@ -5503,6 +5552,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-fIDBe53+vlmeJzZ+DU3VWQFB2zg=
+  /to-regex-range/5.0.1:
+    dependencies:
+      is-number: 7.0.0
+    dev: true
+    engines:
+      node: '>=8.0'
+    resolution:
+      integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   /to-regex/3.0.2:
     dependencies:
       define-property: 2.0.2
@@ -6014,6 +6071,7 @@ packages:
     dev: true
     name: postcss-scopify
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/ExE-Boss/postcss-scopify/tar.gz/d635b154b70b78db1b57a0bf017619d81d28c574'
     version: 0.1.9
 specifiers:
@@ -6043,6 +6101,6 @@ specifiers:
   postcss-import: ^12.0.1
   postcss-scopify: 'git+https://github.com/ExE-Boss/postcss-scopify.git#selector/ampersand'
   postcss-simple-vars: ^5.0.2
-  stylelint: ^9.10.1
+  stylelint: ^10.0.0
   stylelint-config-recommended: ^2.1.0
   yargs: ^13.2.2
