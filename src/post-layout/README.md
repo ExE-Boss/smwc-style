@@ -1,4 +1,4 @@
-[![Stylesheet](https://img.shields.io/website-active-errored/https/exe-boss.tech/smwc-style/exe-boss.css.svg?label=stylesheet)](https://exe-boss.tech/smwc-style/exe-boss.css)
+[![Stylesheet](https://img.shields.io/website/https/ExE-Boss.tech/smwc-style/exe-boss.min.css.svg?down_message=errored&label=stylesheet&logo=css3&logoColor=white&up_message=active)](https://ExE-Boss.tech/smwc-style/exe-boss.min.css)
 [![License](https://img.shields.io/github/license/ExE-Boss/smwc-style.svg)](https://github.com/ExE-Boss/smwc-style/blob/master/LICENSE)
 
 SMW Central Post Layout
