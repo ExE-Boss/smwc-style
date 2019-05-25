@@ -20,7 +20,7 @@ devDependencies:
   gulp-postcss: 8.0.0
   gulp-rename: 1.4.0
   gulp-sourcemaps: 2.6.5
-  gulp-stylelint: 8.0.0
+  gulp-stylelint: 9.0.0
   lodash.range: 3.2.0
   merge-stream: 2.0.0
   postcss: 7.0.16
@@ -212,13 +212,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-EaObqwIvayI5a8dCzhFrjKzVwKLxjoG9T6Ppd5CEo07LRKfQ8Yokw54r5+Wq7FaBQ+yXRvQAYPrHwya1/UFt9g==
-  /@types/express-serve-static-core/4.16.5:
+  /@types/express-serve-static-core/4.16.6:
     dependencies:
       '@types/node': 10.14.7
       '@types/range-parser': 1.2.3
     dev: true
     resolution:
-      integrity: sha512-T8oej2B9TVALoCK4epWXRNWaFaqDyOaEQ3ntph+tSw5QoKnZfxgCXefIm3+nGp2XCRrkX4X7U5CSTMnwKJcOjQ==
+      integrity: sha512-8wr3CA/EMybyb6/V8qvTRKiNkPmgUA26uA9XWD6hlA0yFDuqi4r2L0C2B0U2HAYltJamoYJszlkaWM31vrKsHg==
   /@types/glob-stream/6.1.0:
     dependencies:
       '@types/glob': 7.1.1
@@ -250,14 +250,14 @@ packages:
       integrity: sha512-0E8/iV/7FKWyQWSmi7jnUvgXXgaw+pfAzEB06Xu+l0iXVJppLbpOye5z7E2klw5akXd+8kPtYuk65YBcZPM4ow==
   /@types/lodash.range/3.2.6:
     dependencies:
-      '@types/lodash': 4.14.130
+      '@types/lodash': 4.14.132
     dev: true
     resolution:
       integrity: sha512-bofMTb/7zteggVbeQfMp5iMd1Dar0txmq/i2HEWgrRabF4HxZsyHeny9YktvUGpgkk2m1A4qEkUovVWpbFDYRg==
-  /@types/lodash/4.14.130:
+  /@types/lodash/4.14.132:
     dev: true
     resolution:
-      integrity: sha512-H++wk0tbneBsRVfLkgAAd0IIpmpVr2Bj4T0HncoOsQf3/xrJexRYQK2Tqo0Ej3pFslM8GkMgdis9bu6xIb1ycw==
+      integrity: sha512-RNUU1rrh85NgUJcjOOr96YXr+RHwInGbaQCZmlitqOaCKXffj8bh+Zxwuq5rjDy5OgzFldDVoqk4pyLEDiwxIw==
   /@types/merge-stream/1.1.2:
     dependencies:
       '@types/node': 10.14.7
@@ -292,7 +292,7 @@ packages:
       integrity: sha512-ewFXqrQHlFsgc09MK5jP5iR7vumV/BYayNC6PgJO2LPe8vrnNFyjQjSppfEngITi0qvfKtzFvgKymGheFM9UOA==
   /@types/serve-static/1.13.2:
     dependencies:
-      '@types/express-serve-static-core': 4.16.5
+      '@types/express-serve-static-core': 4.16.6
       '@types/mime': 2.0.1
     dev: true
     resolution:
@@ -588,10 +588,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-iYUI2iIm84DfkEcoRWhJwVAaSw0=
-  /asap/2.0.6:
-    dev: true
-    resolution:
-      integrity: sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=
   /assign-symbols/1.0.0:
     dev: true
     engines:
@@ -847,7 +843,7 @@ packages:
   /browserslist/4.6.0:
     dependencies:
       caniuse-lite: 1.0.30000971
-      electron-to-chromium: 1.3.136
+      electron-to-chromium: 1.3.137
       node-releases: 1.1.21
     dev: true
     hasBin: true
@@ -1347,13 +1343,6 @@ packages:
       node: '>=0.10'
     resolution:
       integrity: sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
-  /deep-extend/0.5.1:
-    dev: true
-    engines:
-      iojs: '>=1.0.0'
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha512-N8vBdOa+DF7zkRrDCsaOXoCs/E2fJfx9B9MrKnnSiHNh4ws7eSys6YQE4KvT1cecKmOASYQBhbKjeuDD9lT81w==
   /deep-is/0.1.3:
     dev: true
     resolution:
@@ -1532,10 +1521,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
-  /electron-to-chromium/1.3.136:
+  /electron-to-chromium/1.3.137:
     dev: true
     resolution:
-      integrity: sha512-xHkYkbEi4kI+2w5v6yBGCQTRXL7N0PWscygTFZu/1bArnPSo2WR9xjdw4m06RR4J5PncrWJcuOVv+MAG2mK5JQ==
+      integrity: sha512-kGi32g42a8vS/WnYE7ELJyejRT7hbr3UeOOu0WeuYuQ29gCpg9Lrf6RdcTQVXSt/v0bjCfnlb/EWOOsiKpTmkw==
   /emoji-regex/7.0.3:
     dev: true
     resolution:
@@ -1718,7 +1707,7 @@ packages:
       semver: 5.7.0
       strip-ansi: 4.0.0
       strip-json-comments: 2.0.1
-      table: 5.3.3
+      table: 5.4.0
       text-table: 0.2.0
     dev: true
     engines:
@@ -2375,24 +2364,22 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-SYLBRzPTew8T5Suh2U8jCSDKY+4NARua4aqjj8HOysBh2tSgT9u4jc1FYirAdPx1akUxxDeK++fqw6Jg0LkQRg==
-  /gulp-stylelint/8.0.0:
+  /gulp-stylelint/9.0.0:
     dependencies:
       chalk: 2.4.2
-      deep-extend: 0.5.1
       fancy-log: 1.3.3
       mkdirp: 0.5.1
       plugin-error: 1.0.1
-      promise: 8.0.3
-      source-map: 0.5.7
-      strip-ansi: 4.0.0
-      through2: 2.0.5
+      source-map: 0.7.3
+      strip-ansi: 5.2.0
+      through2: 3.0.1
     dev: true
     engines:
-      node: '>=6'
+      node: '>=8.15.1'
     peerDependencies:
-      stylelint: ^9.6.0
+      stylelint: ^10.0.0
     resolution:
-      integrity: sha512-oEnOsRzS4wObF25dUXF4Mi7lSACUoVbnUt7/ZJqEBsnF+2NWUWf7DHnG3CAQvioAQ+rteeduuyN0TAqxoeNy2Q==
+      integrity: sha512-JoYzy68jc26Z53ZtCJq9teZ81u3QS5DUwoRKHkPbs6k0xpafOVYnRIoOCDGc59vRWTvMDahxyaTlNvolCzr+sA==
   /gulp/4.0.2:
     dependencies:
       glob-watcher: 5.0.3
@@ -3338,12 +3325,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-pWB896KPGSGkp1XtyzRBftpTzwSOL0Gfk0wLvxt4f2mgzjY19o0LxJ3U25vNWTzsh7da+KTbuXQoQ3lOJZ8WHw==
-  /mdast-util-compact/1.0.2:
+  /mdast-util-compact/1.0.3:
     dependencies:
       unist-util-visit: 1.4.1
     dev: true
     resolution:
-      integrity: sha512-d2WS98JSDVbpSsBfVvD9TaDMlqPRz7ohM/11G0rp5jOBb5q96RJ6YLszQ/09AAixyzh23FeIpCGqfaamEADtWg==
+      integrity: sha512-nRiU5GpNy62rZppDKbLwhhtw5DXoFMqw9UNZFmlPsNaQCZ//WLjGKUwWMdJrUH+Se7UvtO2gXtAMe0g/N+eI5w==
   /mem/4.3.0:
     dependencies:
       map-age-cleaner: 0.1.3
@@ -4263,12 +4250,6 @@ packages:
       node: '>=0.4.0'
     resolution:
       integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
-  /promise/8.0.3:
-    dependencies:
-      asap: 2.0.6
-    dev: true
-    resolution:
-      integrity: sha512-HeRDUL1RJiLhyA0/grn+PTShlBAcLuh/1BJGtrvjwbvRDCTLLMEz9rOGCV+R3vHY4MixIuoMEd9Yq/XvsTPcjw==
   /pump/2.0.1:
     dependencies:
       end-of-stream: 1.4.1
@@ -4463,7 +4444,7 @@ packages:
       longest-streak: 2.0.3
       markdown-escapes: 1.0.3
       markdown-table: 1.1.3
-      mdast-util-compact: 1.0.2
+      mdast-util-compact: 1.0.3
       parse-entities: 1.2.2
       repeat-string: 1.6.1
       state-toggle: 1.0.2
@@ -4932,6 +4913,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+  /source-map/0.7.3:
+    dev: true
+    engines:
+      node: '>= 8'
+    resolution:
+      integrity: sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==
   /sparkles/1.0.1:
     dev: true
     engines:
@@ -5210,7 +5197,7 @@ packages:
       style-search: 0.1.0
       sugarss: 2.0.0
       svg-tags: 1.0.0
-      table: 5.3.3
+      table: 5.4.0
     dev: true
     engines:
       node: '>=8.7.0'
@@ -5270,7 +5257,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-g0D8RwLDEi310iKI+IKD9RPT/dQ=
-  /table/5.3.3:
+  /table/5.4.0:
     dependencies:
       ajv: 6.10.0
       lodash: 4.17.11
@@ -5280,7 +5267,7 @@ packages:
     engines:
       node: '>=6.0.0'
     resolution:
-      integrity: sha512-3wUNCgdWX6PNpOe3amTTPWPuF6VGvgzjKCaO1snFj0z7Y3mUPWf5+zDtxUVGispJkDECPmR29wbzh6bVMOHbcw==
+      integrity: sha512-nHFDrxmbrkU7JAFKqKbDJXfzrX2UBsWmrieXFTGxiI5e4ncg3VqsZeI4EzNmX0ncp4XNGVeoxIWJXfCIXwrsvw==
   /text-table/0.2.0:
     dev: true
     resolution:
@@ -5931,7 +5918,7 @@ specifiers:
   gulp-postcss: ^8.0.0
   gulp-rename: ^1.4.0
   gulp-sourcemaps: ^2.6.5
-  gulp-stylelint: ^8.0.0
+  gulp-stylelint: ^9.0.0
   lodash.range: ^3.2.0
   merge-stream: ^2.0.0
   postcss: ^7.0.14
