@@ -12,7 +12,7 @@ addons:
             confinement: classic
 
 node_js:
-    - "10"
+    - "12"
 
 # The pre-install script
 before_install:
