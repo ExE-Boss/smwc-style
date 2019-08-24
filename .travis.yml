@@ -4,8 +4,12 @@ env:
         - secure: "iDPQpUx/GSiZCB04HXqy3Xr4ePsHBwTmUTMk1GclosXgsytzTEQXNT9P9Y0kdZ0nawYvWYDAjUECKstT8MXkzYuUZMulBXukxacGNOuLaabTUiqCH5BYYBV1aJQzFlm0p6PH84QNkfn1qffuCqAjv4NWvEwAv8QP9nzdxZdoo4olTbZ5ZFthfLhvhGOm8J3FFGjoL9GXgF6XkDg0G/Ij+28jZ5O9yM72Gd2C7mQBhBD8bTkW8B8uwsdf6mbqyKf9Xt6mol2+XqOxSHRXkRnnG7bkWBydW0B1sOti3Y3X2TfwI8cT83bSqBmuPzDMB7J1WfjXVJnEGbAPim2ZbQk0c95CRu7qWE3miCdy4MyYvNlP6OMoWUX7B1nUq604/f8kbfK3p+R1SoFYmo21XHfHto1sJjAhvIBZlA6T5Few81uN4tB/GnDxCnXFP/cpbvLYAHcopTmpndmbUHGP90HD4Q+issjtQAr6xK9oPrGoKZDJdKrZ2T8qiyZ/yVyKq2PQO6FZkH/IXr5OxEZN7J8XlsuwwyPKTr+8I/oxm9HgRB5ea0VOkBFJLAVYC1v/qnHHVK1NQNG1Po1ymgEnli3PH6uls1rUzOBB0mVkZfvHvRTCB0jg9PI+BCw4P3onn6aZ4DPm7d7PmLdfeNq6HKiUIGJkn+h4BWzjPr3gSNNDlBQ="
         - "BUILD_DIR=dist"
 
-sudo: false
 language: node_js
+addons:
+    snaps:
+        -
+            name: powershell
+            confinement: classic
 
 node_js:
     - "10"
@@ -25,11 +29,11 @@ before_script:
 
 # The build script
 script:
-    - ./bin/post-layout $BUILD_DIR
+    - pwsh ./bin/post-layout.ps1 $BUILD_DIR
 
 # The commit script
 after_success:
-    - ./bin/travis-push-update $BUILD_DIR
+    - pwsh ./bin/travis-push-update.ps1 $BUILD_DIR
 
 # Disable email notifications
 notifications:

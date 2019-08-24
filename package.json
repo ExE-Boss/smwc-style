@@ -6,7 +6,7 @@
 	"license": "GPL-3.0",
 	"private": true,
 	"scripts": {
-		"build": "./bin/build",
+		"build": "pwsh ./bin/build.ps1",
 		"lint": "gulp lint && eslint **/*.js",
 		"post-layout": "gulp post-layout"
 	},
