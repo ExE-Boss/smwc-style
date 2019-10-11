@@ -25,7 +25,7 @@ devDependencies:
   merge-stream: 2.0.0
   postcss: 7.0.18
   postcss-import: 12.0.1
-  postcss-scopify: github.com/ExE-Boss/postcss-scopify/55661f707fc5fcd6172f11739a32f58741dfc57b
+  postcss-scopify: github.com/EB-Forks/postcss-scopify/784948021c425c8d5ab4d66ef21eba5aaf823c54
   postcss-simple-vars: 5.0.2
   stylelint: 10.1.0
   stylelint-config-recommended: 2.2.0_stylelint@10.1.0
@@ -1304,13 +1304,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-oUnjmWpy0niI3x/mPL8dVEI1l7MnG3+HHyRPHf+YFSbK+svOhXpmSOcDURUh2aOCgl2grzrOPt1nHLuCVFULLw==
-  /cssesc/1.0.1:
+  /cssesc/3.0.0:
     dev: true
     engines:
       node: '>=4'
     hasBin: true
     resolution:
-      integrity: sha512-S2hzrpWvE6G/rW7i7IxJfWBYn27QWfOIncUW++8Rbo1VB5zsJDSVPcnI+Q8z7rhxT6/yZeLOCja4cZnghJrNGA==
+      integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
   /currently-unhandled/0.4.1:
     dependencies:
       array-find-index: 1.0.2
@@ -4175,16 +4175,16 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-T4dfSvsMllc9XPTXQBGu4lCn6GU=
-  /postcss-selector-parser/4.0.0:
+  /postcss-selector-parser/6.0.2:
     dependencies:
-      cssesc: 1.0.1
+      cssesc: 3.0.0
       indexes-of: 1.0.1
       uniq: 1.0.1
     dev: true
     engines:
       node: '>=4'
     resolution:
-      integrity: sha512-5h+MvEjnzu1qy6MabjuoPatsGAjjDV9B24e7Cktjl+ClNtjVjmvAXjOFQr1u7RlWULKNGYaYVE4s+DIIQ4bOGA==
+      integrity: sha512-36P2QR59jDTOAiIkqEprfJDsoNrvwFei3eCqKd1Y0tUsBimsq39BLp7RD+JWny3WgB1zGhJX8XVePwm9k4wdBg==
   /postcss-simple-vars/5.0.2:
     dependencies:
       postcss: 7.0.18
@@ -5896,14 +5896,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-AI4G2AlDIMNy28L47XagymyKxBk=
-  github.com/ExE-Boss/postcss-scopify/55661f707fc5fcd6172f11739a32f58741dfc57b:
+  github.com/EB-Forks/postcss-scopify/784948021c425c8d5ab4d66ef21eba5aaf823c54:
     dependencies:
       postcss: 5.2.18
-      postcss-selector-parser: 4.0.0
+      postcss-selector-parser: 6.0.2
     dev: true
     name: postcss-scopify
     resolution:
-      tarball: 'https://codeload.github.com/ExE-Boss/postcss-scopify/tar.gz/55661f707fc5fcd6172f11739a32f58741dfc57b'
+      tarball: 'https://codeload.github.com/EB-Forks/postcss-scopify/tar.gz/784948021c425c8d5ab4d66ef21eba5aaf823c54'
     version: 0.1.9
 specifiers:
   '@exe-boss/eslint-config': 0.2.1
@@ -5931,7 +5931,7 @@ specifiers:
   merge-stream: ^2.0.0
   postcss: ^7.0.17
   postcss-import: ^12.0.1
-  postcss-scopify: 'git+https://github.com/ExE-Boss/postcss-scopify.git#selector/ampersand'
+  postcss-scopify: 'github:EB-Forks/postcss-scopify#selector/ampersand'
   postcss-simple-vars: ^5.0.2
   stylelint: ^10.1.0
   stylelint-config-recommended: ^2.2.0
