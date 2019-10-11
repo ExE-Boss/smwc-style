@@ -21,7 +21,7 @@ before_install:
 
 # The install script
 install:
-    - pnpm install --prefer-frozen-shrinkwrap
+    - pnpm install --frozen-lockfile
 
 # The pre-build script
 before_script:
