@@ -48,7 +48,7 @@
 		"postcss-import": "^12.0.1",
 		"postcss-scopify": "github:EB-Forks/postcss-scopify#selector/ampersand",
 		"postcss-simple-vars": "^5.0.2",
-		"stylelint": "^10.1.0",
+		"stylelint": "^11.0.0",
 		"stylelint-config-recommended": "^2.2.0",
 		"yargs": "^14.0.0"
 	},
