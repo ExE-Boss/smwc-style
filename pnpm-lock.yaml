@@ -28,7 +28,7 @@ devDependencies:
   postcss-scopify: github.com/EB-Forks/postcss-scopify/784948021c425c8d5ab4d66ef21eba5aaf823c54
   postcss-simple-vars: 5.0.2
   stylelint: 11.1.1
-  stylelint-config-recommended: 2.2.0_stylelint@11.1.1
+  stylelint-config-recommended: 3.0.0_stylelint@11.1.1
   yargs: 14.2.0
 lockfileVersion: 5.1
 packages:
@@ -5146,14 +5146,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-eVjHk+R+MuB9K1yv5cC/jhLneQI=
-  /stylelint-config-recommended/2.2.0_stylelint@11.1.1:
+  /stylelint-config-recommended/3.0.0_stylelint@11.1.1:
     dependencies:
       stylelint: 11.1.1
     dev: true
     peerDependencies:
-      stylelint: ^8.3.0 || ^9.0.0 || ^10.0.0
+      stylelint: '>=10.1.0'
     resolution:
-      integrity: sha512-bZ+d4RiNEfmoR74KZtCKmsABdBJr4iXRiCso+6LtMJPw5rd/KnxUWTxht7TbafrTJK1YRjNgnN0iVZaJfc3xJA==
+      integrity: sha512-F6yTRuc06xr1h5Qw/ykb2LuFynJ2IxkKfCMf+1xqPffkxh0S09Zc902XCffcsw/XMFq/OzQ1w54fLIDtmRNHnQ==
   /stylelint/11.1.1:
     dependencies:
       autoprefixer: 9.6.5
@@ -5934,5 +5934,5 @@ specifiers:
   postcss-scopify: 'github:EB-Forks/postcss-scopify#selector/ampersand'
   postcss-simple-vars: ^5.0.2
   stylelint: ^11.0.0
-  stylelint-config-recommended: ^2.2.0
+  stylelint-config-recommended: ^3.0.0
   yargs: ^14.0.0
