@@ -50,7 +50,7 @@
 		"postcss-simple-vars": "^5.0.2",
 		"stylelint": "^11.0.0",
 		"stylelint-config-recommended": "^3.0.0",
-		"yargs": "^14.0.0"
+		"yargs": "^15.0.0"
 	},
 	"browserslist": [
 		"> 0.5%",
