@@ -10,7 +10,7 @@ devDependencies:
   '@types/lodash.range': 3.2.6
   '@types/merge-stream': 1.1.2
   '@types/node': 12.12.14
-  '@types/yargs': 13.0.3
+  '@types/yargs': 15.0.0
   autoprefixer: 9.7.2
   browser-sync: 2.26.7
   del: 5.1.0
@@ -388,12 +388,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-gCubfBUZ6KxzoibJ+SCUc/57Ms1jz5NjHe4+dI2krNmU5zCPAphyLJYyTOg06ueIyfj+SaCUqmzun7ImlxDcKg==
-  /@types/yargs/13.0.3:
+  /@types/yargs/15.0.0:
     dependencies:
       '@types/yargs-parser': 13.1.0
     dev: true
     resolution:
-      integrity: sha512-K8/LfZq2duW33XW/tFwEAfnZlqIfVsoyRB3kfXdPXYhl0nfM8mmh7GS0jg7WrX2Dgq/0Ha/pR1PaR+BvmWwjiQ==
+      integrity: sha512-TITCsNxRSDVmq3kPGuUdKZTPTfHeswsUGIjxSe8SB4EBKTPA0DO0y4yWI95kZ2hfqJAYxmu+gxzjOwdumB5S0g==
   /accepts/1.3.7:
     dependencies:
       mime-types: 2.1.25
@@ -6063,6 +6063,7 @@ packages:
     dev: true
     name: postcss-scopify
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/EB-Forks/postcss-scopify/tar.gz/784948021c425c8d5ab4d66ef21eba5aaf823c54'
     version: 0.1.9
 specifiers:
@@ -6075,7 +6076,7 @@ specifiers:
   '@types/lodash.range': 3.x
   '@types/merge-stream': 1.x
   '@types/node': 12.x
-  '@types/yargs': 13.x
+  '@types/yargs': 15.x
   autoprefixer: ^9.6.1
   bootstrap: 4.4.1
   browser-sync: ^2.26.7
