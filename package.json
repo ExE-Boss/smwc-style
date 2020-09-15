@@ -32,7 +32,7 @@
 		"@types/merge-stream": "1.x",
 		"@types/node": "12.x",
 		"@types/yargs": "15.x",
-		"autoprefixer": "^9.6.1",
+		"autoprefixer": "^10.0.0",
 		"browser-sync": "^2.26.7",
 		"del": "^5.1.0",
 		"eslint": "^6.2.2",
