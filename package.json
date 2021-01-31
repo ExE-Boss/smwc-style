@@ -31,7 +31,7 @@
 		"@types/lodash.range": "3.x",
 		"@types/merge-stream": "1.x",
 		"@types/node": "12.x",
-		"@types/yargs": "15.x",
+		"@types/yargs": "16.x",
 		"autoprefixer": "^9.6.1",
 		"browser-sync": "^2.26.7",
 		"del": "^5.1.0",
@@ -50,7 +50,7 @@
 		"postcss-simple-vars": "^5.0.2",
 		"stylelint": "^13.0.0",
 		"stylelint-config-recommended": "^3.0.0",
-		"yargs": "^15.0.0"
+		"yargs": "^16.0.0"
 	},
 	"browserslist": [
 		"> 0.5%",
