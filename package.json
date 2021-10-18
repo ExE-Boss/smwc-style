@@ -27,7 +27,7 @@
 		"@types/autoprefixer": "9.x",
 		"@types/browser-sync": "2.x",
 		"@types/gulp": "4.x",
-		"@types/gulp-sourcemaps": "^0.0.32",
+		"@types/gulp-sourcemaps": "^0.0.35",
 		"@types/lodash.range": "3.x",
 		"@types/merge-stream": "1.x",
 		"@types/node": "12.x",
