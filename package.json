@@ -30,7 +30,7 @@
 		"@types/gulp-sourcemaps": "^0.0.32",
 		"@types/lodash.range": "3.x",
 		"@types/merge-stream": "1.x",
-		"@types/node": "12.x",
+		"@types/node": "20.x",
 		"@types/yargs": "15.x",
 		"autoprefixer": "^9.6.1",
 		"browser-sync": "^2.26.7",
