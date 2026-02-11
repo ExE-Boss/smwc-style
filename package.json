@@ -24,7 +24,7 @@
 	"devDependencies": {
 		"@exe-boss/eslint-config": "0.2.2",
 		"@exe-boss/renovate-config": "0.1.0",
-		"@types/autoprefixer": "9.x",
+		"@types/autoprefixer": "10.x",
 		"@types/browser-sync": "2.x",
 		"@types/gulp": "4.x",
 		"@types/gulp-sourcemaps": "^0.0.32",
@@ -32,7 +32,7 @@
 		"@types/merge-stream": "1.x",
 		"@types/node": "12.x",
 		"@types/yargs": "15.x",
-		"autoprefixer": "^9.6.1",
+		"autoprefixer": "^10.0.0",
 		"browser-sync": "^2.26.7",
 		"del": "^5.1.0",
 		"eslint": "^6.2.2",
